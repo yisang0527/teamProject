@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>사이트맵 > 인천국제공항공사</title>
+    <!-- 파비콘 -->
+    <link rel="icon" type="image/png" href="img/pavicon.png">
+
     <style>
         /* 기본설정 */
         * {
@@ -49,7 +52,7 @@
         }
 
         .logo1>p {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: bold;
         }
 
@@ -107,13 +110,13 @@
 
         /* .header2 */
         .header2 {
+            background-color: #333;
             width: 100%;
             height: 110px;
             position: relative;
-            background-color: #333;
         }
 
-        .header2>.logo2 {
+        .header2 .logo2 {
             display: inline-block;
             position: absolute;
             top: 50%;
@@ -121,11 +124,11 @@
             transform: translateY(-50%);
         }
 
-        .header2>.logo2 a {
+        .header2 .logo2 a {
             display: inline-block;
         }
 
-        .header2>.logo2 img {
+        .header2 .logo2 img {
             display: block;
             width: auto;
             height: auto;
@@ -153,16 +156,11 @@
         .header2>ul li a {
             color: #ccc;
             display: block;
-            font-size: 20px;
-            font-weight: bold;
+            font-size: 19px;
+            font-weight: 500;
         }
 
-        .header2>ul li a:hover {
-            cursor: pointer;
-            color: #009ea7;
-        }
-
-        .header2 .ulList {
+        .header2 .list1 {
             width: 100%;
             height: calc(100vh - 150px);
             position: absolute;
@@ -171,85 +169,16 @@
             display: none;
         }
 
-        .header2 .menuList {
+        .header2 .list1 .textArea {
             width: 100%;
-            height: 330px;
-            background-color: white;
-            border-top: 1px solid #ccc;
+            height: 360px;
+            background: blue;
         }
 
-        .header2 .blur {
+        .header2 .list1 .blur {
             width: 100%;
-            height: calc(100vh - 480px);
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .header2 .menuList {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .header2 .menuList1 {
-            width: 150px;
-            height: 280px;
-        }
-
-        .header2 .menuList1 p:nth-of-type(1) {
-            font-size: 30px;
-            font-weight: bold;
-        }
-
-        .header2 .menuList1 p:nth-of-type(2) {
-            color: #555;
-            font-size: 18px;
-        }
-
-        .header2 .menuList2 {
-            width: 1400px;
-            height: 280px;
-            display: flex;
-        }
-
-        .header2 .menuList2-1 {
-            width: 350px;
-            height: 100%;
-            position: relative;
-            padding: 5px 20px;
-        }
-
-        .header2 .menuList2-1 p:nth-of-type(1) {
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .header2 .menuList2-1 img {
-            width: 30px;
-            position: absolute;
-            top: 5px;
-            right: 15px;
-        }
-
-        .header2 .menuList2-1 p:nth-of-type(2) {
-            background-color: #333;
-            width: 95%;
-            height: 1px;
-            margin: 10px auto 10px;
-        }
-
-        .header2 .menuList2-1 ul {
-            list-style: disc;
-            width: 85%;
-            margin: auto;
-        }
-
-        .header2 .menuList2-1 li {
-            margin: 12px 0;
-        }
-
-        .header2 .menuList2-1 a {
-            color: #666;
-            font-size: 14px;
+            height: calc(100% - 360px);
+            background-color: rgba(0, 0, 0, 0.8);
         }
     </style>
 
@@ -257,14 +186,13 @@
 
     <script>
         $(function () {
-            $(".header2>ul a").hover(
-                function () { // mouseenter
-                    $(".ulList").stop(true, true).show();
-                },
-                function () { // mouseleave
-                    $(".ulList").stop(true, true).hide();
-                }
-            );
+            $(".header2>ul li:nth-child(1)").on("mouseenter", function () {
+                $(".list1").stop(true, true).fadeIn(200);
+            });
+
+            $(".textArea").on("mouseleave", function () {
+                $(".list1").stop(true, true).fadeOut(400);
+            });
         });
     </script>
 </head>
@@ -300,60 +228,9 @@
                 <li><a href="#">인재채용</a></li>
             </ul>
 
-            <div class="ulList">
-                <div class="menuList">
-                    <div class="menuList1">
-                        <p>공사소개</p>
-                        <p>Incheon Airport</p>
-                    </div>
+            <div class="list1">
+                <div class="textArea">
 
-                    <div class="menuList2">
-                        <div class="menuList2-1">
-                            <p>CEO 메세지</p>
-                            <img src="img/ap1.png" alt="비행기 이미지">
-                            <p></p>
-                            <ul>
-                                <li><a href="#">인사말</a></li>
-                                <li><a href="#">프로필</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="menuList2-1">
-                            <p>일반현황</p>
-                            <img src="img/ap1.png" alt="비행기 이미지">
-                            <p></p>
-                            <ul>
-                                <li><a href="#">사업영역</a></li>
-                                <li><a href="#">비전</a></li>
-                                <li><a href="#">연혁</a></li>
-                                <li><a href="#">기관상징(CI) / 슬로건</a></li>
-                                <li><a href="#">한눈에 보는 인천공항</a></li>
-                                <li><a href="#">오시는 길</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="menuList2-1">
-                            <p>조직</p>
-                            <img src="img/ap1.png" alt="비행기 이미지">
-                            <p></p>
-                            <ul>
-                                <li><a href="#">조직소개</a></li>
-                                <li><a href="#">임원 및 경영진</a></li>
-                                <li><a href="#">직원 업무 및 연락처</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="menuList2-1">
-                            <p>홍보센터</p>
-                            <img src="img/ap1.png" alt="비행기 이미지">
-                            <p></p>
-                            <ul>
-                                <li><a href="#">수상</a></li>
-                                <li><a href="#">갤러리</a></li>
-                                <li><a href="#">간행물</a></li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="blur">
@@ -362,6 +239,10 @@
             </div>
         </div>
     </header>
+
+    <main>
+
+    </main>
 </body>
 
 </html>
