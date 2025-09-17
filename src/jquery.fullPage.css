@@ -138,7 +138,7 @@ html.fp-enabled,
     display: block;
     width: 14px;
     height: 13px;
-    margin: 7px;
+    margin: 20px;
     position:relative;
 }
 .fp-slidesNav ul li {
@@ -154,37 +154,88 @@ html.fp-enabled,
     cursor: pointer;
     text-decoration: none;
 }
+
+
 #fp-nav ul li a.active span,
 .fp-slidesNav ul li a.active span,
-#fp-nav ul li:hover a.active span,
-.fp-slidesNav ul li:hover a.active span{
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span{
     height: 20px;  /* 여기 수정 원래 14px */
     width: 20px;
     margin: -6px 0 0 -6px;
-    border-radius: 100%;
+
  }
+ 
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-    border-radius: 50%;
     position: absolute;
-    z-index: 1;
-    height: 12px; /* 여기 수정 원래 4px */
-    width: 12px;
-    border: 0;
-    background: #ffffff;
+    background-image: url('air.png');
+    background-size: 100% 100%; /* 이미지가 잘리지 않게 설정 */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    
+    /* ✅ 이 부분이 위치를 고정하고 중앙에 맞추는 핵심 코드입니다. */
     left: 50%;
     top: 50%;
-    margin: -2px 0 0 -2px;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
+    transform: translate(-50%, -50%);
+    
+    opacity: 1;
+    transition: transform 0.3s ease-in-out;
 }
-#fp-nav ul li:hover a span,
-.fp-slidesNav ul li:hover a span{
-    width: 15px;
-    height: 15px;  /* 여기 수정 원래 10px */
-    margin: -5px 0px 0px -5px;
+
+/* ✅ 첫 번째 페이지가 활성화됐을 때 도트 이미지 */
+#fp-nav ul li:nth-child(1) a.active span {
+    width: 30px;
+    height: 10px;
+    background-image: url('Home.png');
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+}
+
+/* ✅ 두 번째 페이지가 활성화됐을 때 도트 이미지 */
+#fp-nav ul li:nth-child(2) a.active span {
+    background-image: url('Our-Business.png');
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+    width: 65px;
+   height: 10px;
+}
+
+/* ✅ 세 번째 페이지가 활성화됐을 때 도트 이미지 */
+#fp-nav ul li:nth-child(3) a.active span {
+    background-image: url('One-Stop-Support.png');
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+    width: 60px;
+   height: 13px;
+}
+
+/* ✅ 네 번째 페이지가 활성화됐을 때 도트 이미지 */
+#fp-nav ul li:nth-child(4) a.active span {
+    background-image: url('Airport-Program.png');
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+    width: 60px;
+   height: 13px;
+}
+
+/* ✅ 다섯 번째 페이지가 활성화됐을 때 도트 이미지 */
+#fp-nav ul li:nth-child(5) a.active span {
+    background-image: url('End.png');
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+    width: 20px;
+    height: 10px;
+}
+
+/* 마우스 올렸을 때 도트 이미지 (호버) */
+#fp-nav ul li:hover a span {
+    background-image: url('air.png'); /* 마우스 오버 시 사진 */
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+
 }
 #fp-nav ul li .fp-tooltip {
     position: absolute;

@@ -19,7 +19,7 @@
             font-weight: 300;
             font-display: swap;
         }
-        *{margin: 0; padding: 0; box-sizing: border-box;}
+        *{margin: 0; padding: 0; box-sizing: border-box; }
         html, body { height: 100%; margin: 0; padding: 0;}
         header{width: 100%; position: fixed; left: 0; top: 0; z-index: 1000;}
         a{text-decoration: none; font-family: 'NanumSquareNeo'; }
@@ -46,7 +46,7 @@
         .inner2.scrolled .b1 {color: black !important; transition: color 0.3s ease, font-size 0.3s ease;}
         .inner2.scrolled .b1:hover { color: #009ea7 !important; font-weight: bold !important;}
         .inner2.scrolled .b1:hover{color: #009ea7 !important; font-weight: bold !important;}
-       .inner2.scrolled .top-logo1 img {content: url("img/logo2.png"); transition: height 0.3s ease;}
+        .inner2.scrolled .top-logo1 img {content: url("img/logo2.png"); transition: height 0.3s ease;}
         .inner2.scrolled .site img { content: url("img/site2.png");}
 
         .b1:hover{color: #009ea7; font-weight: bold;}
@@ -124,12 +124,24 @@
   }
         #section2{background-color: white;}
         #section3{background-color: white;}
-        #section4{background-image: url(img/ful4.png);}
-        #section5{background-image: url(img/ful5.png);}
+        #section4{background-image: url(img/ful4.png); opacity: 0.3;}
+        #section5{background-image: url(img/ful5.png); margin-top: 28px;}
         
         .container1, .container2, .container3, .container4{width: 1300px; height: 100%; margin:auto; padding: 30px;}  
         .section { height: 100vh; display: flex; justify-content: center; align-items: center; font-size: 3rem; background-color: #eee; border-bottom: 1px solid #ccc;}
-
+        #ani{width: 19%; height: 20px;  z-index: 2000; display: flex; position: relative; top: 65%; left: -9%; }
+        .ani1{ display: inline; z-index: 2000; }
+        .num1{ color: white; font-size: 16px; z-index: 2000;position: absolute; left: 40px; top: 50px; font-family: 'NanumSquareNeo';}
+        .num2{ color: white; font-size: 16px; z-index: 2000; position: absolute; left: 180px; top: 50px; font-family: 'NanumSquareNeo';}
+        .fix1{width: 120px; height: 2px; background-color: #ffffff80; z-index: 3000; margin-top: 60px; margin-left: 55px;}
+        .gage1{margin-top: -2px; margin-left: 55px; width: 0; height: 2px; background-color: white; transition: width 0.7s linear; animation: gage 4.7s infinite; color: white;}
+        @keyframes gage {
+            0% {width: 0;}
+            100% {width: 120px;}
+           }
+        #left{position: absolute; left: 200px; top: 57px;}
+        #stop{position: absolute; left: 220px; top: 57px;}
+        #right{position: absolute;left: 240px; top: 57px;}
         .bar{ position: relative; width: 1500px; height: 200px; border-top: 1px solid #ccc; top: 690px; left: -340px;  box-sizing: border-box; z-index: 3; justify-content: center; align-items: center;}
         .hover-box { position: absolute; top: 80px; left: 5.9%; display: flex; z-index: 3; }
         .hover-box li{list-style: none; margin-left: 20px; width: 238px; height: 75px; border: 1px solid #ffffff80; text-align: center; line-height: 1; border-radius: 5px;}
@@ -148,25 +160,38 @@
         /* 푸터 */
         footer{width: 100%; height: 300px; background-color: black; position: absolute; bottom: 0;}
         .link1{width: 100%; height: 110px; border: 1px solid #333333;}
-        .link{display: flex; margin-left: 5.9%; height: 110px; margin-top: 10px;}
+        .link{display: flex; margin-left: 5.9%; height: 110px; margin-top: 45px;}
         .link li{list-style: none;  justify-content: center; list-style: none; margin: 0; position: relative; }
         .link li a{display: inline-block; font-size: 17px; color: #989898;   border-right: 1px solid #989898; line-height: 10px!important;  padding: 0 15px; text-decoration: none;}
         .link li:nth-child(2) a{font-size: 17px; color: #FFee00;}
-        .link li p { height: 1px; background-color: white; width: 0%; margin-top: 0px; transition: width 0.4s ease; transform-origin: left;}
-        .link li:hover p {width: 100%;}
+        .link li p{ height: 1px; background-color: white; width: 0%; margin-top: 0px; transition: width 0.4s ease; transform-origin: left; z-index: 2000;}
+        .link li:hover p {width: 100%; }
         .link li:hover a { color: white;}
         .link li:hover:nth-child(2) a{ color: #FFee00;}
         .link li:hover:nth-child(2) p{ background-color: #FFee00;}
         .bottom{width: 188px; height: 72px; margin-left: 6%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; margin-top:80px;}
 
+        footer{position: fixed; bottom: -300px; width: 100%; transition: bottom 0.8s ease;z-index: 1000; opacity: 0;}
+        footer.show {bottom: 0; opacity: 1;}
+        
+        /* footer{opacity: 0; transform: translateY(180px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;}
+        footer.show-footer {opacity: 1; transform: translateY(0);} */
         .footer-info { display: flex; flex-direction: column; margin-left: 750px; position: relative; top: -80px;}
-        .footer-info dl { display: flex; justify-content: space-between; width: 50%; font-size: 16px; gap: 15px;}
-        .footer-info dl:nth-child(1) { display: flex; justify-content: space-between; width: 50%; font-size: 16px; gap: 90px;}
-        .footer-info dt { text-align: left; color: #03b4dc; white-space: nowrap; flex-shrink: 0;}
-        .footer-info dd {text-align: right; white-space: nowrap; flex-shrink: 0; color: white;}
-        .footer-r{position: absolute;}
-        .footer-r img{width: 55px; height: 40px;}
-        .footer-r ul li:nth-child(1) img{width: 25px; height: 25px; }
+        .footer-info dl { display: flex; justify-content: space-between; width: 50%; font-size: 16px; gap: 15px; font-family: 'NanumSquareNeo';}
+        .footer-info dl:nth-child(1) { display: flex; justify-content: space-between; width: 50%; font-size: 16px; gap: 90px; font-family: 'NanumSquareNeo';}
+        .footer-info dt { text-align: left; color: #03b4dc; white-space: nowrap; flex-shrink: 0; font-family: 'NanumSquareNeo';}
+        .footer-info dd {text-align: right; white-space: nowrap; flex-shrink: 0; color: white; font-family: 'NanumSquareNeo';}
+        .footer-r{position: absolute; width: 200px; height: 50px;}
+        .footer-r ul{width: 150px; height: 20px;  margin-top: -30px; margin-left: 1270px; }
+        .footer-r ul li{height: 20px; display: inline; padding-left: 10px; }
+        .footer-r ul li a{width: 25px; height: 25px; font-family: 'NanumSquareNeo';}
+        .footer-r>img{position: absolute; height: 40px; width: 55px; left: 1210px; top: -40px; }
+        .sns1{height: 20px; cursor: pointer;}
+        .sns2, .sns3, .sns4{height: 20px;}
+        .family-site{width: 243px; height: 45px; border: 1px solid white; background-color: black; color: white; font-size: 18px; text-align: left; padding: 0 10px 0 10px; position: absolute; left: 1430px; top: -40px;}
+        .family-site>img{position: absolute; top: 15px; right: 10px;}
+        .pl{font-size: 14px; color: #989898; width: 500px; font-family: 'NanumSquareNeo'; margin-top: 20px; margin-left: 1210px;}
+            
     </style> 
 
 
@@ -269,24 +294,120 @@
                 fitToSection: true,
                 scrollHorizontally: true,
                 scrollingSpeed: 700,
+
                 onLeave: function(index, nextIndex, direction) {
-        // 첫 번째 섹션(index 1)을 떠날 때 (아래로 스크롤할 때)
-        if (index === 1 && direction === 'down') {
-            $('.inner2').addClass('scrolled');
-        } 
-        // 첫 번째 섹션으로 다시 돌아올 때 (위로 스크롤할 때)
-        else if (nextIndex === 1 && direction === 'up') {
-            $('.inner2').removeClass('scrolled');
-        }
-    }
-    
+                    
+                // 첫 번째 섹션(index 1)을 떠날 때 (아래로 스크롤할 때)
+                if (index === 1 && direction === 'down') {
+                    $('.inner2').addClass('scrolled');
+                } 
+                // 첫 번째 섹션으로 다시 돌아올 때 (위로 스크롤할 때)
+                else if (nextIndex === 1 && direction === 'up') {
+                    $('.inner2').removeClass('scrolled');
+                }
+                // 첫 번째 섹션(index 5)을 떠날 때 (아래로 스크롤할 때)
+                if (index === 5 && direction === 'up') {
+                    $('.inner2').addClass('scrolled');
+                } 
+                // 첫 번째 섹션으로 다시 돌아올 때 (위로 스크롤할 때)
+                else if (nextIndex === 5 && direction === 'down') {
+                    $('.inner2').removeClass('scrolled');
+                }
+                if (index === 5 && direction === 'down') {
+     
+  
+                // if (index === 5 && direction === 'down') {
+                    
+                //     if (index === 5 && direction === 'down') {
+                //         $('footer').addClass('show-footer');
+                //     } 
+                
+                //     else if (nextIndex === 5 && direction === 'up') {
+                //         $('footer').removeClass('show-footer');
+                //     }
+                
+                // }
+                
+            }
+            
+            let footerVisible = false;
+
+            // fullpage 초기화는 이미 되어있으니 onLeave 이벤트에 추가하자
+            // 하지만 onLeave가 이미 정의되어 있어서, 여기서는 휠 이벤트만 따로 처리할게
+
+            // 휠 이벤트로 푸터 보이기
+            $(window).on('wheel', function(e){
+                const delta = e.originalEvent.deltaY;
+                const currentSection = $('.fp-section.active');
+                const isLast = currentSection.index() === 5;  // 0부터 시작하니까 4가 5번째 섹션
+
+                if(isLast && delta > 0 && !footerVisible){
+                $('#footer').addClass('show');
+                footerVisible = true;
+                } else if(footerVisible && delta < 0){
+                $('#footer').removeClass('show');
+                footerVisible = false;
+                // 4번째 섹션으로 이동
+                $.fn.fullpage.moveTo(4);
+                }
+            });
+
+            }
+            
             });
         
             $('.blur').hover(function(){
                 $('#b1, #b2, #b3, #b4').removeClass('active');
             });
-            
-            });
+            let footerVisible = false;
+            let wheelCount = 0;
+
+            $(window).on('wheel', function(e){
+                const delta = e.originalEvent.deltaY;
+                const currentSection = $('.fp-section.active');
+                const isLast = currentSection.index() === 4;  // 5번째 섹션 (index 0부터 시작)
+
+                // 5번째에서 휠 내릴 때 → 푸터 보이기 (두 번 내려야)
+                if (isLast && delta > 0 && !footerVisible) {
+                    wheelCount++;
+                    if (wheelCount >= 2) {
+                        $('footer').addClass('show');
+                        footerVisible = true;
+                        wheelCount = 0;
+                    }
+                }
+
+                // 푸터가 보이는 상태에서 휠 올릴 때 → 푸터 숨기고 4번 섹션으로
+                else if (footerVisible && delta < 0) {
+                    $('footer').removeClass('show');
+                    footerVisible = false;
+                    wheelCount = 0;
+                    $.fn.fullpage.moveTo(4);  // 4번째 섹션 (index 3)
+                }
+
+                // 다른 경우에는 카운트 초기화
+                else if (!isLast || delta < 0) {
+                    wheelCount = 0;
+                }
+        
+            if (footerVisible && nextIndex !== 5) {
+                $('footer').removeClass('show');
+                footerVisible = false;
+                wheelCount = 0;
+            }
+
+                $('#fp-nav').on('click', 'ul li a span', function() {
+                    if (footerVisible) {
+                        $('footer').removeClass('show');
+                        footerVisible = false;
+                        wheelCount = 0;
+                    }
+                });
+
+
+                        });
+
+                        });
             
 
     </script>
@@ -533,6 +654,19 @@
                 <div class="text">
                     <p>공항을 넘어,<br>세상을 바꿉니다.</p>
                     <span>Beyond an Airport,<br>Changing the World</span>
+                    <div id="ani">
+                        <div class="ani1">
+                            <p class="num1">1</p>
+                            <p class="fix1"></p>
+                            <p class="gage1"></p>
+                            <p class="num2">2</p>
+                        </div>
+                        <div class="play-btn">
+                            <img id="left" src="img/left.png">
+                            <img id="stop" src="img/stop.png">
+                            <img id="right" src="img/right.png">
+                        </div>
+                    </div>
                 </div>
                 <div class="bar">
                     <ul class="hover-box">
@@ -576,7 +710,12 @@
                 <div class="text5">
                     <p>Walt Disney<br> 05</p>
                 </div>
-                <footer>
+                
+            </div>
+        </div>
+        
+    </div>
+    <footer>
                 <div class="link1"> 
                 <ul class="link">
                     <li><a href="#">이용약관</a>
@@ -622,19 +761,15 @@
                 <div class="footer-r">
                     <img src="img/web.png">
                     <ul>
-                        <li><a href="#"><img src="img/sns1.png"></a></li>
-                        <li><a href="#"><img src="img/sns2.png"></a></li>
-                        <li><a href="#"><img src="img/sns3.png"></a></li>
-                        <li><a href="#"><img src="img/sns4.png"></a></li>
+                        <li><a href="#"><img src="img/sns1.png" class="sns1"></a></li>
+                        <li><a href="#"><img src="img/sns2.png" class="sns2"></a></li>
+                        <li><a href="#"><img src="img/sns3.png" class="sns3"></a></li>
+                        <li><a href="#"><img src="img/sns4.png" class="sns4"></a></li>
                      </ul>
                     <button class="family-site">관련 사이트<img src="img/bottom-arrow.png"></button>
-                    <p> Copyright Incheon International Airport Corporation. All rights reserved. </p>
+                    <p class="pl"> Copyright Incheon International Airport Corporation. All rights reserved. </p>
                 </div>
              </div>
         </footer>
-            </div>
-        </div>
-    </div>
-    
 </body>
 </html>
