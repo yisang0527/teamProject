@@ -23,10 +23,386 @@
         }
         
         *{margin: 0; padding: 0; box-sizing: border-box; font-family: 'NanumSquareNeo';}
-        body{color: #333;}
+        html,body{height: 100%; width: 100%; color: #333;}
         header{width: 100%; position: fixed; left: 0; top: 0; z-index: 1000; height: 110px;}
-        a{text-decoration: none;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #333;}
 
+        /* header */
+        /* .header1 */
+        .header1 {
+            width: 100%;
+            height: 40px;
+            background-color: #0b193c;
+            position: fixed;
+        }
+
+        .header1>.logo1 {
+            width: 120px;
+            height: 100%;
+            background-color: #77eff7;
+            position: absolute;
+            top: 0;
+            left: 6%;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .logo1>p {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .uiButton {
+            position: absolute;
+            top: 0;
+            right: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .uiButton>button {
+            width: 50px;
+            height: 40px;
+            border: none;
+            background-color: #0b193c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .uiButton>button:hover {
+            cursor: pointer;
+        }
+
+        .uiButton>button p {
+            color: #eee;
+            font-size: 15px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .uiButton>button img {
+            width: 100%;
+            padding-bottom: 5px;
+        }
+
+        .uiButton>.lang {
+            width: 50px;
+            height: 68px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
+            text-align: center;
+            line-height: 22px;
+            position: absolute;
+            top: 35px;
+            left: 13%;
+            display: none;
+        }
+
+        .uiButton>.lang p {
+            color: #eee;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .uiButton>.darkmode {
+            width: 100px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        .uiButton>.darkmode:hover {
+            cursor: pointer;
+        }
+
+        .uiButton>.darkmode img {
+            height: 70%;
+        }
+
+        /* .header2 */
+        .header2 {
+            width: 100%;
+            height: 110px;
+            position: fixed;
+            top: 40px;
+        }
+
+        .header2 .logo2 {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 6%;
+            transform: translateY(-50%);
+        }
+
+        .header2 .logo2 a {
+            display: inline-block;
+        }
+
+        .header2 .logo2 img {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+        }
+
+        .header2>ul {
+            width: 800px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            right: 11%;
+        }
+
+        .header2>ul li {
+            width: 200px;
+            height: 100%;
+            text-align: center;
+            line-height: 110px;
+        }
+
+        .header2>ul li a {
+            display: block;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: color 0.18s;
+        }
+
+        .header2.menu-open>ul>li>a {
+            color: #333;
+        }
+
+        .header2>ul>li>a:hover,
+        .header2.menu-open>ul>li>a:hover {
+            color: #009ea7;
+        }
+
+        .header2>a {
+            position: absolute;
+            top: 53%;
+            right: 6%;
+            transform: translateY(-50%);
+        }
+
+        /* 공사소개 리스트 */
+        .header2 .list {
+            width: 100%;
+            height: calc(100vh - 150px);
+            position: absolute;
+            top: 110px;
+            left: 0;
+            display: none;
+        }
+
+        .header2 .list1 .textArea {
+            width: 100%;
+            height: 360px;
+            position: relative;
+            border-top: 1px solid #ccc;
+            background-color: white;
+        }
+
+        .header2 .textArea .left {
+            width: 200px;
+            height: 100%;
+            padding: 30px 0 0;
+            position: absolute;
+            top: 0;
+            left: 110px;
+        }
+
+        .header2 .textArea .left p:nth-of-type(1) {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .header2 .textArea .left p:nth-of-type(2) {
+            font-size: 18px;
+        }
+
+        .header2 .list1 .right {
+            width: 1300px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 200px;
+        }
+
+        .header2 .list1 .big {
+            width: 100%;
+            height: 100%;
+            padding: 35px 0 0;
+            display: flex;
+            gap: 50px;
+        }
+
+        .header2 .list1 .big>li {
+            width: 25%;
+            position: relative;
+        }
+
+        .header2 .big>li>a {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .header2 .big>li>img {
+            width: 28px;
+            position: absolute;
+            top: 0;
+            right: 10px;
+        }
+
+        .header2 .big p {
+            width: 95%;
+            height: 1px;
+            background-color: #ccc;
+            margin: 10px auto;
+        }
+
+        .header2 .small>li {
+            margin: 0 0 15px;
+        }
+
+        .header2 .small>li>a {
+            color: #666;
+        }
+
+        .header2 .list1 .blur {
+            width: 100%;
+            height: calc(100% - 360px);
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* 고객소통 리스트 */
+        .header2 .list2 .textArea {
+            width: 100%;
+            height: 550px;
+            position: relative;
+            border-top: 1px solid #ccc;
+            background-color: white;
+        }
+
+        .header2 .list2 .right {
+            width: 1300px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 200px;
+        }
+
+        .header2 .list2 .big {
+            width: 100%;
+            height: 100%;
+            padding: 35px 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        .header2 .list2 .big>li {
+            width: 22%;
+            position: relative;
+        }
+
+        .header2 .list2 .blur {
+            width: 100%;
+            height: calc(100% - 550px);
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* 업무지원 리스트 */
+        .header2 .list3 .textArea {
+            width: 100%;
+            height: 650px;
+            position: relative;
+            border-top: 1px solid #ccc;
+            background-color: white;
+        }
+
+        .header2 .list3 .right {
+            width: 1300px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 200px;
+        }
+
+        .header2 .list3 .big {
+            width: 100%;
+            height: 100%;
+            padding: 35px 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        .header2 .list3 .big>li {
+            width: 22%;
+            position: relative;
+        }
+
+        .header2 .list3 .blur {
+            width: 100%;
+            height: calc(100% - 650px);
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* 인재채용 리스트 */
+        .header2 .list4 .textArea {
+            width: 100%;
+            height: 360px;
+            position: relative;
+            border-top: 1px solid #ccc;
+            background-color: white;
+        }
+
+        .header2 .list4 .right {
+            width: 1300px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 200px;
+        }
+
+        .header2 .list4 .big {
+            width: 100%;
+            height: 100%;
+            padding: 35px 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        .header2 .list4 .big>li {
+            width: 22%;
+            position: relative;
+        }
+
+        .highlight-text {
+            color: #009ea7 !important;
+            font-weight: bold;
+        }
+
+        .highlight-bg {
+            background-color: #009ea7 !important;
+        }
+
+        .header2 .list4 .blur {
+            width: 100%;
+            height: calc(100% - 360px);
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
         .wraptop{width: 100%; height: 450px; border: 1px solid red;}
         .topinner{width: 100%; height: 420px; display: flex; align-items: center;
             background-image: url(img/hi.jpg); background: no-repeat center center cover; }
@@ -34,214 +410,614 @@
         .topinner_ye{color: #fadd1c; font-size: 22px; text-align: center; border: 1px solid red;}
         .topinner_bigt{font-family: 'rix'; font-size: 40px; color: #fff; text-align: center; border: 1px solid red;}
         
+        
+        @media screen and (max-width:1470px) {
+            .header2>ul {
+                width: 600px;
+            }
+
+            .header2>ul li {
+                width: 150px;
+            }
+        }
+
+        @media screen and (max-width:1210px) {
+            .header2>ul {
+                display: none;
+            }
+        }
+
 
     </style> 
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
+
     <script>
+        $(function () {
+            // 언어 선택 버튼
+            $(".uiButton button").click(function () {
+                $(".lang").slideToggle();
+            });
+
+            // 다크모드
+            let darkmode = false;
+            $(".darkmode img").click(function () {
+                darkmode = !darkmode;
+                if (darkmode) {
+                    $(".siteList").addClass("dark");
+                    $(this).attr("src", "img/darkMode2-1.png");
+                } else {
+                    $(".siteList").removeClass("dark");
+                    $(this).attr("src", "img/darkMode1.png");
+                }
+            });
+
+            // 메뉴 호버 이벤트
+            $(".header2>ul li").on("mouseenter", function () {
+                var idx = $(this).index() + 1;
+                var listSel = ".list" + idx;
+
+                $(".header2").css("background-color", "white");
+                $(".logo2 img").attr("src", "img/logo2.png");
+
+                $(".header2 .list").not(listSel).stop(true, true).fadeOut(200).removeClass("visible");
+                $(listSel).stop(true, true).fadeIn(300).addClass("visible");
+
+                // 호버된 a 태그 색상 항상 #333
+                $(".header2>ul li a").css("color", "#333");
+                $(this).find("a").css("color", "#009ea7"); // 호버된 a 강조
+
+                $(".header2").addClass("menu-open");
+            });
+
+            $(".header2 .textArea").on("mouseleave", function () {
+                // 메뉴 호버가 종료될 때 배경과 글자색 결정
+                if ($(window).scrollTop() > 0) {
+                    // 스크롤 내려간 상태
+                    $(".header2").css("background-color", "white");
+                    $(".header2>ul li a").css("color", "#333");
+                    $(".logo2 img").attr("src", "img/logo2.png");
+                } else {
+                    // 최상단 상태
+                    $(".header2").css("background-color", "transparent");
+                    $(".header2>ul li a").css("color", "white"); // 최상단에서는 흰색 유지
+                    $(".logo2 img").attr("src", "img/logo1.png");
+                }
+
+                $(".header2 .list").stop(true, true).fadeOut(200).removeClass("visible");
+                $(".header2>ul li a").removeClass("active");
+                $(".header2").removeClass("menu-open");
+            });
+
+
+            // 메뉴 a 태그 호버 색상
+            $(".header2>ul li a").hover(
+                function () {
+                    $(this).css("color", "#009ea7"); // 호버 시 강조
+                },
+                function () {
+                    // hover 해제 시 색상은 스크롤 상태에 따라 결정
+                    if ($(window).scrollTop() > 0 || $(".header2").hasClass("menu-open")) {
+                        $(this).css("color", "#333");
+                    } else {
+                        $(this).css("color", "#333"); // 최상단에서도 #333
+                    }
+                }
+            );
+
+            $('.big li').hover(
+                function(){
+                    $(this).children('a').css('color','#009ea7');
+                    $(this).children('img').attr('src','img/menu-hover.png');
+                    $(this).children('P').css('color','#009ea7');
+                },
+                function(){
+                    $(this).children('a').css('color','#333');
+                    $(this).children('img').attr('src','img/menu.png');
+                    $(this).children('P').css('color','#333');
+                }
+            );
+
+            // list .small a 호버
+            $(".list .small li").hover(
+                function () {
+                    var $smallA = $(this).find('a');
+                    var $smallLi = $(this);
+                    
+
+                    $smallA.addClass("highlight-text");
+                    
+                },
+                function () {
+                    var $smallA = $(this).find('a');
+                    var $smallLi = $(this);
+
+                    $smallA.removeClass("highlight-text");
+                   
+                }
+            );
+
+            // 스크롤 이벤트
+            $(window).on("scroll", function () {
+                if ($(window).scrollTop() > 0) {
+                    // 스크롤 내려간 상태
+                    $(".header2").css("background-color", "white");
+                    $(".header2>ul li a").css("color", "#333");
+                    $(".logo2 img").attr("src", "img/logo2.png");
+                } else {
+                    // 최상단
+                    $(".header2").css("background-color", "transparent");
+                    $(".header2>ul li a").css("color", "white"); // 최상단에서는 흰색 유지
+                    $(".logo2 img").attr("src", "img/logo1.png");
+                }
+            });
+        });
     </script>
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <div class="header1">
+            <div class="logo1">
+                <p>인천국제공항</p>
+            </div>
+
+            <div class="uiButton">
+                <button>
+                    <p>KOR</p>
+                    <img src="img/top-arrow.png" alt="토글 버튼">
+                </button>
+
+                <div class="lang">
+                    <p>ENG<br>CHN<br>JPN</p>
+                </div>
+
+                <div class="darkmode">
+                    <img src="img/darkMode1.png" alt="다크모드 이미지">
+                </div>
+            </div>
+        </div>
+
+        <div class="header2">
+            <div class="logo2">
+                <a href="#"><img src="img/logo1.png" alt="로고 이미지"></a>
+            </div>
+
+            <ul>
+                <li><a href="#">공사소개</a></li>
+                <li><a href="#">고객소통</a></li>
+                <li><a href="#">업무지원</a></li>
+                <li><a href="#">인재채용</a></li>
+            </ul>
+
+            <a href="#">
+                <img src="img/ham.png" alt="사이트맵 버튼">
+            </a>
+
+            <div class="list list1">
+                <div class="textArea">
+                    <div class="left">
+                        <p>공사소개</p>
+                        <p>Incheon Airport</p>
+                    </div>
+                    <div class="right">
+                        <ul class="big">
+                            <li><a href="#">CEO 메세지</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                                <ul class="small">
+                                    <li><a href="#">인사말</a></li>
+                                    <li><a href="#">프로필</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">일반현황</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                                <ul class="small">
+                                    <li><a href="#">사업영역</a></li>
+                                    <li><a href="#">비전</a></li>
+                                    <li><a href="#">연혁</a></li>
+                                    <li><a href="#">기관상징(CI) / 슬로건</a></li>
+                                    <li><a href="#">한눈에 보는 인천공항</a></li>
+                                    <li><a href="#">오시는 길</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">조직</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                                <ul class="small">
+                                    <li><a href="#">조직소개</a></li>
+                                    <li><a href="#">임원 및 경영진</a></li>
+                                    <li><a href="#">직원 업무 및 연락처</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">홍보센터</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                                <ul class="small">
+                                    <li><a href="#">수상</a></li>
+                                    <li><a href="#">갤러리</a></li>
+                                    <li><a href="#">간행물</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="blur"></div>
+            </div>
+
+            <div class="list list2">
+                <div class="textArea">
+                    <div class="left">
+                        <p>고객소통</p>
+                        <p>Incheon Airport</p>
+                    </div>
+                    <div class="right">
+                        <ul class="big">
+                            <li><a href="#">공지사항</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                            </li>
+
+                            <li><a href="#">보도자료</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                            </li>
+
+                            <li><a href="#">민원마당</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                                <ul class="small">
+                                    <li><a href="#">민원신청 안내</a></li>
+                                    <li><a href="#">온라인 민원</a></li>
+                                    <li><a href="#">서면 민원</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">청렴신문고</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                                <ul class="small">
+                                    <li><a href="#">신고하기</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">신고센터</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                                <ul class="small">
+                                    <li><a href="#">불법하도급신고</a></li>
+                                    <li><a href="#">예산낭비신고</a></li>
+                                    <li><a href="#">기업성장응답센터</a></li>
+                                    <li><a href="#">안전신문고</a></li>
+                                    <li><a href="#">인사채용비리 제보센터</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">견학 / 관람</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                                <ul class="small">
+                                    <li><a href="#">공항견학</a></li>
+                                    <li><a href="#">홍보전망대</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="blur"></div>
+            </div>
+
+            <div class="list list3">
+                <div class="textArea">
+                    <div class="left">
+                        <p>업무지원</p>
+                        <p>Incheon Airport</p>
+                    </div>
+                    <div class="right">
+                        <ul class="big">
+                            <li><a href="#">규정</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                            </li>
+
+                            <li><a href="#">출입증/촬영/신변보호업무</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                            </li>
+
+                            <li><a href="#">업무서비스</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                                <ul class="small">
+                                    <li><a href="#">항공사 사용계약</a></li>
+                                    <li><a href="#">영접카운터/가로등배너</a></li>
+                                    <li><a href="#">구내영업승인</a></li>
+                                    <li><a href="#">부지영업승인</a></li>
+                                    <li><a href="#">운항지원 서비스</a></li>
+                                    <li><a href="#">장애물 관리</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">지원시설</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                                <ul class="small">
+                                    <li><a href="#">공항청사 종합체육시설</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">임대 및 입주지원</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                                <ul class="small">
+                                    <li><a href="#">업무용시설 임대</a></li>
+                                    <li><a href="#">상업용시설 임대</a></li>
+                                    <li><a href="#">입주신청</a></li>
+                                    <li><a href="#">입주자서비스센터</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="blur"></div>
+            </div>
+
+            <div class="list list4">
+                <div class="textArea">
+                    <div class="left">
+                        <p>인재채용</p>
+                        <p>Incheon Airport</p>
+                    </div>
+                    <div class="right">
+                        <ul class="big">
+                            <li><a href="#">채용안내</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                            </li>
+
+                            <li><a href="#">인재상</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                            </li>
+
+                            <li><a href="#">직무소개</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                                <ul class="small">
+                                    <li><a href="#">일반직</a></li>
+                                    <li><a href="#">안전보안직</a></li>
+                                    <li><a href="#">방재직</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">채용공고</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                            </li>
+
+                            <li><a href="#">자주하는 질문</a>
+                                <img src="img/menu.png" alt="비행기 이미지">
+                                <p></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="blur"></div>
+            </div>
+        </div>
+    </header>
     
     
     
+    
+    <main>
     <!------- 탑 -------->
     <!-- 탑 제목 -->
-    <section class="wraptop">
-        <div class="topinner">
-            <div class="topinner_center">
-                <p class="topinner_ye">공사소개</p>
-                <p class="topinner_bigt">인사말</p>
+        <section class="wraptop">
+            <div class="topinner">
+                <div class="topinner_center">
+                    <p class="topinner_ye">공사소개</p>
+                    <p class="topinner_bigt">인사말</p>
+                </div>
             </div>
-        </div>
 
 
-    <!-- 탑 서브 -->
-        <div class="naviinner">
-            <!-- 탑 서브 좌측 내비 -->
-            <div class="subnavi">
-                <ul class="navibox">
-                    <li>
-                        <a href="#" aria-label="홈링크"></a>
-                    </li>
-                    <li>
-                        <div class="navmenu1">
-                            <button class="navbtn1" type="button" title="축소됨" aria-label="축소됨"><span>공사소개</span></button>
-                        </div>
-                        <div class="sublist1">
-                            <a href="#"><span>공사소개</span></a>
-                            <a href="#"><span>ESG 경영</span></a>
-                            <a href="#"><span>정보공개</span></a>
-                            <a href="#"><span>고객소통</span></a>
-                            <a href="#"><span>주요사업</span></a>
-                            <a href="#"><span>업무지원</span></a>
-                            <a href="#"><span>인재채용</span></a>
-                            <a href="#"><span>기타</span></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="navmenu2">
-                            <button class="navbtn2" type="button" title="축소됨" aria-label="축소됨"><span>CEO메세지</span></button>
-                        </div>
-                        <div class="sublist2">
-                            <a href="#"><span>CEO메세지</span></a>
-                            <a href="#"><span>일반현황</span></a>
-                            <a href="#"><span>조직</span></a>
-                            <a href="#"><span>홍보센터</span></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="navmenu3">
-                            <button class="navbtn3" type="button" title="축소됨" aria-label="축소됨"><span>인사말</span></button>
-                        </div>
-                        <div class="sublist3">
-                            <a href="#"><span>인사말</span></a>
-                            <a href="#"><span>프로필</span></a>
-                        </div>
-                    </li>
-                </ul>
-                <!-- 탑 서브 우측 기능 -->
-                <div class="subend">
-                    <ul>
+        <!-- 탑 서브 -->
+            <div class="naviinner">
+                <!-- 탑 서브 좌측 내비 -->
+                <div class="subnavi">
+                    <ul class="navibox">
                         <li>
-                            <button class="share" type="button" title="공유하기 버튼 축소됨" aria-label="공유하기"></button>
-                            <div class="subbox1">
-                                <ul>
-                                    <li>
-                                        <button class="kakao" type="button" type="button" aria-label="카카오톡" title="새창"></button>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="mail" aria-label="메일 공유하기"></a>
-                                    </li>
-                                    <li>
-                                        <button class="address" type="button" aria-label="링크 공유하기"></button>
-                                    </li>
-                                    <li>
-                                        <button class="close" type="button" aria-label="닫기"></button>
-                                    </li>
-                                </ul>
+                            <a href="#" aria-label="홈링크"></a>
+                        </li>
+                        <li>
+                            <div class="navmenu1">
+                                <button class="navbtn1" type="button" title="축소됨" aria-label="축소됨"><span>공사소개</span></button>
+                            </div>
+                            <div class="sublist1">
+                                <a href="#"><span>공사소개</span></a>
+                                <a href="#"><span>ESG 경영</span></a>
+                                <a href="#"><span>정보공개</span></a>
+                                <a href="#"><span>고객소통</span></a>
+                                <a href="#"><span>주요사업</span></a>
+                                <a href="#"><span>업무지원</span></a>
+                                <a href="#"><span>인재채용</span></a>
+                                <a href="#"><span>기타</span></a>
                             </div>
                         </li>
                         <li>
-                            <button class="fav" type="button" title="즐겨찾기" aria-label="즐겨찾기">즐겨찾기</button>
-                            <div class="subbox2">
-                                <p>즐겨찾는 메뉴</p>
-                                <button class="closefav" aria-label="닫기" title="닫기"></button>
-                                <div class="control">
-                                    <button type="button">메뉴 추가하기</button>
-                                    <button type="button">초기화</button>
-                                </div>
+                            <div class="navmenu2">
+                                <button class="navbtn2" type="button" title="축소됨" aria-label="축소됨"><span>CEO메세지</span></button>
+                            </div>
+                            <div class="sublist2">
+                                <a href="#"><span>CEO메세지</span></a>
+                                <a href="#"><span>일반현황</span></a>
+                                <a href="#"><span>조직</span></a>
+                                <a href="#"><span>홍보센터</span></a>
                             </div>
                         </li>
                         <li>
-                            <button class="print" type="button" aria-label="인쇄하기" title="인쇄하기"></button>
+                            <div class="navmenu3">
+                                <button class="navbtn3" type="button" title="축소됨" aria-label="축소됨"><span>인사말</span></button>
+                            </div>
+                            <div class="sublist3">
+                                <a href="#"><span>인사말</span></a>
+                                <a href="#"><span>프로필</span></a>
+                            </div>
                         </li>
                     </ul>
+                    <!-- 탑 서브 우측 기능 -->
+                    <div class="subend">
+                        <ul>
+                            <li>
+                                <button class="share" type="button" title="공유하기 버튼 축소됨" aria-label="공유하기"></button>
+                                <div class="subbox1">
+                                    <ul>
+                                        <li>
+                                            <button class="kakao" type="button" type="button" aria-label="카카오톡" title="새창"></button>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="mail" aria-label="메일 공유하기"></a>
+                                        </li>
+                                        <li>
+                                            <button class="address" type="button" aria-label="링크 공유하기"></button>
+                                        </li>
+                                        <li>
+                                            <button class="close" type="button" aria-label="닫기"></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="fav" type="button" title="즐겨찾기" aria-label="즐겨찾기">즐겨찾기</button>
+                                <div class="subbox2">
+                                    <p>즐겨찾는 메뉴</p>
+                                    <button class="closefav" aria-label="닫기" title="닫기"></button>
+                                    <div class="control">
+                                        <button type="button">메뉴 추가하기</button>
+                                        <button type="button">초기화</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="print" type="button" aria-label="인쇄하기" title="인쇄하기"></button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!------- /탑------->
+        </section>
+        <!------- /탑------->
 
-    <!------- 본문 콘텐츠 ------->
-    <section class="wrapcontents">
-        <!-- 본문 제목 -->
-        <div class="h1box">
-            <h1>인사말</h1>
-        </div>
-        <!-- 콘텐츠 -->
-        <div class="contents">
-            <!-- 글 영역 -->
-            <div class="textbox">
-                <!-- 글제목 -->
-                <div class="titlebox">
-                    <p>세계 1등 공항을 넘어<br>
-                        글로벌 공항산업의 창의적 선도자로 도약하겠습니다!</p>
-                </div>
-                <!-- 글 -->
-                <div class="articlebox">
-                    <span>
-                        <p>
-                            안녕하십니까? 인천국제공항공사 사장 이학재입니다.<br>
-                            인천국제공항 홈페이지를 찾아주신 여러분을 진심으로 환영합니다.</p>
-                        <p>
-                            지난 2001년 동북아 허브공항을 목표로 개항한 인천국제공항은 국민 여러분의 성원, 정부의 비전과 정책, 7만여 공항 종사자들의 헌신적인 노력에 힘입어 국제화물 2위, 국제여객 5위의 허브공항이자 세계의 하늘길을 잇는 핵심 거점으로 도약할 수 있었습니다.
-                        </p>
-                        <p>
-                            최근 큰 어려움을 겪었던 코로나19를 지나 항공산업과 공항생태계는 수요 선점을 위한 치열한 경쟁에 직면해 있고, 공항은 산업과 경제 문화를 아우르는 플랫폼으로서의 역할을 요구받고 있습니다. 또한 디지털 기술의 급격한 발전과 모빌리티 혁명은 새로운 기회와 도전의 요소입니다.
-                        </p>
-                        <p>
-                            이에 우리는 첨단 IT기술을 통한 서비스 혁신이 접목된 제2여객터미널 확장사업을 2024년 성공적으로 마무리하여 여객 중심의 독보적 가치를 만들어가고, 인천공항의 역할을 항공운송의 중심지를 넘어 지역·국가경제 발전 및 관광과 산업발전의 중심지로 확대하여 글로벌 융·복합 메가허브로 재도약하고자 합니다.
-                        </p>
-                        <p>
-                            국민의 신뢰 속에서 전 세계 공항을 선도해 나가는 초일류 공항이 될 수 있도록 "현장에 답이 있다"는 생각으로 항상 여러분의 소리를 듣겠습니다. 새로운 미래를 만들기 위한 인천국제공항의 끝없는 변화와 도전에 많은 애정과 격려 부탁드립니다.
-                        </p>
-                        <p>
-                            감사합니다.
-                        </p>
-                    </span>
-                </div>
+        <!------- 본문 콘텐츠 ------->
+        <section class="wrapcontents">
+            <!-- 본문 제목 -->
+            <div class="h1box">
+                <h1>인사말</h1>
             </div>
-            <!-- 사진 영역 -->
-            <div class="imagebox">
-                <img src="img/hiperson.jpg" alt="인천국제공항공사 사장">
-                <!-- 사진 밑 이름 -->
-                <div class="namebox">
-                    <span>인천국제공항공사 사장</span>
-                    <p>이학재</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!------- /본문 콘텐츠 ------->
-    <!------- 만족도 조사 -------->
-    <section class="wrapunder">
-        <div class="underinner">
-            <!-- 폼 -->
-            <div class="form">
-                <!-- 폼 제목 -->
-                <div class="formtitle">
-                    콘텐츠 만족도 조사
-                </div>
-                <!-- 오지선다형 체크 폼 -->
-                <div class="formbox">
-                    <div class="radio">
-                        <label for="score5">
-                            <input type="radio" id="score5" name="score" title="매우만족"
-                                checked="checked" value="5">
-                            <span>매우만족</span>
-                        </label>
-                        <label for="score4">
-                            <input type="radio" id="score4" name="score" title="만족"
-                                checked="checked" value="4">
-                            <span>만족</span>
-                        </label>
-                        <label for="score3">
-                            <input type="radio" id="score3" name="score" title="보통"
-                                checked="checked" value="3">
-                            <span>보통</span>
-                        </label>
-                        <label for="score2">
-                            <input type="radio" id="score2" name="score" title="불만족"
-                                checked="checked" value="2">
-                            <span>불만족</span>
-                        </label>
-                        <label for="score1">
-                            <input type="radio" id="score1" name="score" title="매우불만족"
-                                checked="checked" value="1">
-                            <span>매우불만족</span>
-                        </label>
+            <!-- 콘텐츠 -->
+            <div class="contents">
+                <!-- 글 영역 -->
+                <div class="textbox">
+                    <!-- 글제목 -->
+                    <div class="titlebox">
+                        <p>세계 1등 공항을 넘어<br>
+                            글로벌 공항산업의 창의적 선도자로 도약하겠습니다!</p>
                     </div>
-                    <!-- 텍스트 폼 -->
-                    <div class="inputbox">
-                        <input type="text" id="opinion" name="opinion" maxlength="200"
-                        placeholder="※ 콘텐츠 개선의견을 남겨주세요">
-                        <button class="inputbtn" type="button" title="확인">참여하기</button>
+                    <!-- 글 -->
+                    <div class="articlebox">
+                        <span>
+                            <p>
+                                안녕하십니까? 인천국제공항공사 사장 이학재입니다.<br>
+                                인천국제공항 홈페이지를 찾아주신 여러분을 진심으로 환영합니다.</p>
+                            <p>
+                                지난 2001년 동북아 허브공항을 목표로 개항한 인천국제공항은 국민 여러분의 성원, 정부의 비전과 정책, 7만여 공항 종사자들의 헌신적인 노력에 힘입어 국제화물 2위, 국제여객 5위의 허브공항이자 세계의 하늘길을 잇는 핵심 거점으로 도약할 수 있었습니다.
+                            </p>
+                            <p>
+                                최근 큰 어려움을 겪었던 코로나19를 지나 항공산업과 공항생태계는 수요 선점을 위한 치열한 경쟁에 직면해 있고, 공항은 산업과 경제 문화를 아우르는 플랫폼으로서의 역할을 요구받고 있습니다. 또한 디지털 기술의 급격한 발전과 모빌리티 혁명은 새로운 기회와 도전의 요소입니다.
+                            </p>
+                            <p>
+                                이에 우리는 첨단 IT기술을 통한 서비스 혁신이 접목된 제2여객터미널 확장사업을 2024년 성공적으로 마무리하여 여객 중심의 독보적 가치를 만들어가고, 인천공항의 역할을 항공운송의 중심지를 넘어 지역·국가경제 발전 및 관광과 산업발전의 중심지로 확대하여 글로벌 융·복합 메가허브로 재도약하고자 합니다.
+                            </p>
+                            <p>
+                                국민의 신뢰 속에서 전 세계 공항을 선도해 나가는 초일류 공항이 될 수 있도록 "현장에 답이 있다"는 생각으로 항상 여러분의 소리를 듣겠습니다. 새로운 미래를 만들기 위한 인천국제공항의 끝없는 변화와 도전에 많은 애정과 격려 부탁드립니다.
+                            </p>
+                            <p>
+                                감사합니다.
+                            </p>
+                        </span>
+                    </div>
+                </div>
+                <!-- 사진 영역 -->
+                <div class="imagebox">
+                    <img src="img/hiperson.jpg" alt="인천국제공항공사 사장">
+                    <!-- 사진 밑 이름 -->
+                    <div class="namebox">
+                        <span>인천국제공항공사 사장</span>
+                        <p>이학재</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!------- /만족도 조사 ------->
+        </section>
+        <!------- /본문 콘텐츠 ------->
+        <!------- 만족도 조사 -------->
+        <section class="wrapunder">
+            <div class="underinner">
+                <!-- 폼 -->
+                <div class="form">
+                    <!-- 폼 제목 -->
+                    <div class="formtitle">
+                        콘텐츠 만족도 조사
+                    </div>
+                    <!-- 오지선다형 체크 폼 -->
+                    <div class="formbox">
+                        <div class="radio">
+                            <label for="score5">
+                                <input type="radio" id="score5" name="score" title="매우만족"
+                                    checked="checked" value="5">
+                                <span>매우만족</span>
+                            </label>
+                            <label for="score4">
+                                <input type="radio" id="score4" name="score" title="만족"
+                                    checked="checked" value="4">
+                                <span>만족</span>
+                            </label>
+                            <label for="score3">
+                                <input type="radio" id="score3" name="score" title="보통"
+                                    checked="checked" value="3">
+                                <span>보통</span>
+                            </label>
+                            <label for="score2">
+                                <input type="radio" id="score2" name="score" title="불만족"
+                                    checked="checked" value="2">
+                                <span>불만족</span>
+                            </label>
+                            <label for="score1">
+                                <input type="radio" id="score1" name="score" title="매우불만족"
+                                    checked="checked" value="1">
+                                <span>매우불만족</span>
+                            </label>
+                        </div>
+                        <!-- 텍스트 폼 -->
+                        <div class="inputbox">
+                            <input type="text" id="opinion" name="opinion" maxlength="200"
+                            placeholder="※ 콘텐츠 개선의견을 남겨주세요">
+                            <button class="inputbtn" type="button" title="확인">참여하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!------- /만족도 조사 ------->
+    </main>
 </body>
 </html>
