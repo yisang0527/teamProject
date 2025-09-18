@@ -445,20 +445,18 @@
         /* site list */
         .siteList {
             width: 100%;
-            height: 5000px;
+            height: auto;
             position: absolute;
             top: 420px;
             left: 50%;
             transform: translate(-50%, 0);
             z-index: -200;
             background-color: white;
-            color: #111;
             transition: all 0.5s;
         }
 
         .dark {
             background-color: #121212;
-            color: white;
         }
 
         .headText {
@@ -483,7 +481,6 @@
         .siteNav {
             width: 77%;
             height: 60px;
-            margin: auto;
             background-color: #009ea7;
             position: absolute;
             top: -30px;
@@ -491,7 +488,106 @@
             transform: translateX(-50%);
         }
 
+        .siteText {
+            width: 77%;
+            height: 100%;
+            margin: auto;
+            position: relative;
+            top: 30px;
+        }
+
+        .textHead {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            align-items: center;
+        }
+
+        .textHead p {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .textSection {
+            width: 100%;
+            height: auto;
+            margin-bottom: 100px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .textLeft {
+            width: 13.5%;
+            height: 100%;
+        }
+
+        .textLeft p:nth-of-type(1) {
+            width: 100%;
+            height: 5px;
+            background-color: #009ea7;
+            margin-bottom: 15px;
+        }
+
+        .textLeft p:nth-of-type(2) {
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        .textRight {
+            width: 81.5%;
+            height: 100%;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .siteBig {
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .siteBig>li {
+            width: 25%;
+            padding-top: 30px;
+        }
+
+        .siteBig>li>a {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .siteSmall {
+            margin-top: 20px;
+        }
+
+        .siteSmall>li {
+            margin: 15px 0;
+        }
+
+        .siteSmall>li>a {
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        .siteText2 .siteBig,
+        .siteText3 .siteBig,
+        .siteText4 .siteBig {
+            flex-wrap: wrap;
+        }
+
+        .siteSmall a:hover {
+            color: #009ea7;
+        }
+
         @media screen and (max-width:1470px) {
+            .siteNav {
+                width: 90%;
+            }
+
+            .siteText {
+                width: 90%;
+            }
+
             .header2>ul {
                 width: 600px;
             }
@@ -499,13 +595,86 @@
             .header2>ul li {
                 width: 150px;
             }
+
+            .textLeft p:nth-of-type(2) {
+                font-size: 25px;
+            }
+
+            .siteBig>li {
+                padding-top: 20px;
+            }
+
+            .siteBig>li>a {
+                font-size: 18px;
+            }
+
+            .siteSmall>li>a {
+                font-size: 15px;
+            }
         }
 
         @media screen and (max-width:1210px) {
             .header2>ul {
                 display: none;
             }
+
+            .siteText2 .siteBig,
+            .siteText3 .siteBig,
+            .siteText4 .siteBig {
+                flex-wrap: wrap;
+                gap: 75px;
+            }
+
+            .textLeft p:nth-of-type(2) {
+                font-size: 24px;
+            }
+
+            .siteBig>li {
+                padding-top: 20px;
+            }
+
+            .siteBig>li>a {
+                font-size: 17px;
+            }
+
+            .siteSmall>li>a {
+                font-size: 14px;
+            }
         }
+
+        @media screen and (max-width:1025px) {
+            .siteText1 .siteBig {
+                flex-wrap: wrap;
+                gap: 50px;
+            }
+        }
+
+        @media screen and (max-width:835px) {
+            .siteText1 .siteBig {
+                gap: 75px;
+            }
+
+            .textLeft p:nth-of-type(2) {
+                font-size: 23px;
+            }
+
+            .siteBig>li {
+                padding-top: 19px;
+            }
+
+            .siteBig>li>a {
+                font-size: 16px;
+            }
+
+            .siteSmall>li>a {
+                font-size: 13px;
+            }
+
+            .siteBig {
+                justify-content: space-around;
+            }
+        }
+
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -903,6 +1072,179 @@
 
             <div class="siteNav">
 
+            </div>
+
+            <div class="siteText">
+                <div class="textHead">
+                    <p>사이트맵</p>
+                </div>
+
+                <div class="textSection siteText1">
+                    <div class="textLeft">
+                        <p></p>
+                        <p>공사소개</p>
+                    </div>
+
+                    <div class="textRight">
+                        <ul class="siteBig">
+                            <li><a href="#">CEO 메세지</a>
+                                <ul class="siteSmall">
+                                    <li><a href="#">인사말</a></li>
+                                    <li><a href="#">프로필</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">일반현황</a>
+                                <ul class="siteSmall">
+                                    <li><a href="#">사업영역</a></li>
+                                    <li><a href="#">비전</a></li>
+                                    <li><a href="#">연혁</a></li>
+                                    <li><a href="#">기관상징(CI) / 슬로건</a></li>
+                                    <li><a href="#">한눈에 보는 인천공항</a></li>
+                                    <li><a href="#">오시는 길</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">조직</a>
+                                <ul class="siteSmall">
+                                    <li><a href="#">조직소개</a></li>
+                                    <li><a href="#">임원 및 경영진</a></li>
+                                    <li><a href="#">직원 업무 및 연락처</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">홍보센터</a>
+                                <ul class="siteSmall">
+                                    <li><a href="#">수상</a></li>
+                                    <li><a href="#">갤러리</a></li>
+                                    <li><a href="#">간행물</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="textSection siteText2">
+                    <div class="textLeft">
+                        <p></p>
+                        <p>고객소통</p>
+                    </div>
+
+                    <div class="textRight">
+                        <ul class="siteBig">
+                            <li><a href="#">공지사항</a>
+                            </li>
+
+                            <li><a href="#">보도자료</a>
+                            </li>
+
+                            <li><a href="#">민원마당</a>
+                                <ul class="siteSmall">
+                                    <li><a href="#">민원신청 안내</a></li>
+                                    <li><a href="#">온라인 민원</a></li>
+                                    <li><a href="#">서면 민원</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">청렴신문고</a>
+                                <ul class="siteSmall">
+                                    <li><a href="#">신고하기</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">신고센터</a>
+                                <ul class="siteSmall">
+                                    <li><a href="#">불법하도급신고</a></li>
+                                    <li><a href="#">예산낭비신고</a></li>
+                                    <li><a href="#">기업성장응답센터</a></li>
+                                    <li><a href="#">안전신문고</a></li>
+                                    <li><a href="#">인사채용비리 제보센터</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">견학 / 관람</a>
+                                <ul class="siteSmall">
+                                    <li><a href="#">공항견학</a></li>
+                                    <li><a href="#">홍보전망대</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="textSection siteText3">
+                    <div class="textLeft">
+                        <p></p>
+                        <p>업무지원</p>
+                    </div>
+
+                    <div class="textRight">
+                        <ul class="siteBig">
+                            <li><a href="#">규정</a>
+                            </li>
+
+                            <li><a href="#">출입증/촬영/신변보호업무</a>
+                            </li>
+
+                            <li><a href="#">업무서비스</a>
+                                <ul class="siteSmall">
+                                    <li><a href="#">항공사 사용계약</a></li>
+                                    <li><a href="#">영접카운터/가로등배너</a></li>
+                                    <li><a href="#">구내영업승인</a></li>
+                                    <li><a href="#">부지영업승인</a></li>
+                                    <li><a href="#">운항지원 서비스</a></li>
+                                    <li><a href="#">장애물 관리</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">지원시설</a>
+                                <ul class="siteSmall">
+                                    <li><a href="#">공항청사 종합체육시설</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">임대 및 입주지원</a>
+                                <ul class="siteSmall">
+                                    <li><a href="#">업무용시설 임대</a></li>
+                                    <li><a href="#">상업용시설 임대</a></li>
+                                    <li><a href="#">입주신청</a></li>
+                                    <li><a href="#">입주자서비스센터</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="textSection siteText4">
+                    <div class="textLeft">
+                        <p></p>
+                        <p>인재채용</p>
+                    </div>
+
+                    <div class="textRight">
+                        <ul class="siteBig">
+                            <li><a href="#">채용안내</a>
+                            </li>
+
+                            <li><a href="#">인재상</a>
+                            </li>
+
+                            <li><a href="#">직무소개</a>
+                                <ul class="siteSmall">
+                                    <li><a href="#">일반직</a></li>
+                                    <li><a href="#">안전보안직</a></li>
+                                    <li><a href="#">방재직</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">채용공고</a>
+                            </li>
+
+                            <li><a href="#">자주하는 질문</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
