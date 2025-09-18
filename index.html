@@ -105,7 +105,7 @@
         .inner2:hover .site2{width: 25px; height: 30px; position: fixed; right: 7%; top:9%; display: block;}
         .inner2:hover.site2 img{width: 100%; }
         .site2{display: none;}
-        #fullpage, .section{height:100vh;}
+        #fullpage, .section{height:100vh; }
         #section1 {position: relative; width: 100%; height: 100%;}
         #section1::before, #section1::after {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover;
             background-position: center; background-repeat: no-repeat; transition: opacity 1s ease-in-out; z-index: 0;}
@@ -122,10 +122,6 @@
         .text{position: fixed; z-index: 1; color: white; font-size: 58px; font-family: 'Rix'; top: 32%; left: 12%; line-height: 1.5;}
         .text span{font-size: 25px;  font-family: 'NanumSquareNeo'; font-weight: 400; display: inline-block; line-height: 1.5;
   }
-        #section2{background-color: white;}
-        #section3{background-color: white;}
-        #section4{background-image: url(img/ful4.png); opacity: 0.3;}
-        #section5{background-image: url(img/ful5.png); margin-top: 28px;}
         
         .container1, .container2, .container3, .container4{width: 1300px; height: 100%; margin:auto; padding: 30px;}  
         .section { height: 100vh; display: flex; justify-content: center; align-items: center; font-size: 3rem; background-color: #eee; border-bottom: 1px solid #ccc;}
@@ -155,8 +151,76 @@
             /* 50% {transform: translateY(-8px);} */
             100% {transform: translateY(0);}
             /*100% {transform: translateY(-5px);}*/}
-        
+        /* 섹션 2 */
+        #section2{background-color: white;}
+        .text2 h1{font-family: 'Rix'; font-weight: 100; font-size: 35px; margin-top: 160px; margin-left: 40%; color: #222222;}
+        .pp{font-size: 20px; color: #444444; font-family: 'NanumSquareNeo'; margin-left: 30px; text-align: center;}
+        .bbo{display: flex; width: 1500px; margin-left:-100px; gap: 140px; top: 50px; }
+        #box1, #box2, #box3{position: relative; display: flex; width: 315px; height: 600px; left: 100px; z-index: 1000;top: 70px;}
 
+        .hobo1, .hobo3{ width: 315px; height: 400px; background-color: #fa9d1c; position: absolute; z-index:900; } 
+        .hobo2{ width: 315px; height: 400px; background-color: #fa9d1c; position: absolute; top: 135px;  ; z-index: 900;} 
+        .bus1, .bus2, .bus3{width: 315px; height: 400px; z-index: 1000; }
+        .bus1{ position: absolute; transition: transform 0.3s ease;}
+
+        #box1.on .bus1, #box2.on .bus2, #box3.on .bus3{transform: translate(15px, -15px); transition: transform 0.3s ease;}
+        #box1.on .span1, #box2.on .span2, #box3.on .span3 {color: #fa9d1c;}
+        #box1.on .te1, #box2.on .te2, #box2.on .te2 {font-size: 18px;}
+        #box1.on .span1 img, #box2.on .span2 img, #box3.on .span3 img {content: url('img/or.png');}
+
+        .hobo1.on .bus1, .hobo2.on .bus2, .hobo3.on .bus3{ transform: translate(15px, -15px)}
+        .bus1.on, .bus2.on, .bus3.on{transform: translate(15px, -15px ) }
+        .span1.on, .span2.on, .span3.on{color: #fa9d1c;}
+        .te1.on, .te2.on, .te3.on{font-size: 19px;}
+
+        .span1, .span2, .span3{ font-size: 27px; color: #333333; font-family: 'Rix'; font-weight: 100; position: absolute;  z-index: 900;}
+        .span1{top: 410px; }
+        .span2{top: -15px; }
+        .span3{top: 410px; }
+        .span1 img, .span2 img, .span3 img{width: 30px; height: 30px; margin-left: 30px; margin-top: 10px;}
+        .te1, .te2, .te3{font-size: 18px; color: #666666; font-family: 'NanumSquareNeo';   height: 100px; position: absolute; width: 380px; top: 470px; z-index: 900; line-height: 1.2;}
+        .te2{top: 45px; }
+        .bus2{top: 135px;   position: absolute;  transition: transform 0.3s ease;}
+        .bus3{   position: absolute;  transition: transform 0.3s ease;}
+        .cl1{position: absolute; left: -50px; top: 520px; z-index: 0;}
+        .cl2{position: absolute; top: 750px; left: 450px; z-index: 0;}
+        .cl3{position: absolute; left: 1250px; top: 700px; z-index: 0;}
+        .cl4{position: absolute; left: 1600px; top: 200px; z-index: 0;}
+
+        /* 섹션 3 */
+        #section3{background-color: white;}
+        .text3 h1{font-family: 'Rix'; font-weight: 100; font-size: 35px; margin-top: 160px; margin-left: 35%; color: #222222;}
+        .pp2{font-size: 20px; color: #444444; font-family: 'NanumSquareNeo'; margin-left: 30px; text-align: center;}
+        .bbo2{display: flex; width: 1500px; margin-left:-125px; gap: 100px; top: 50px; }
+        #box4, #box5, #box6, #box7{position: relative; display: flex; width: 300.75px; height: 555.58px; left:0; z-index: 1000;top: 70px;}
+        .back1, .back2, .back3, .back4{position:absolute ; width: 100%; height: 100%;}
+        .bot1, .bot3{position: absolute; width: 100%; background-color: white; height: 100px; bottom: 0; transition: all 0.3s linear;}
+        .bot2, .bot4{position: absolute; width: 100%; background-color: white; height: 100px; top: 0; transition: all 0.3s linear;}
+        .icon-box1, .icon-box3{position: absolute; width: 239.75px; height: 227.78px; background-color: #152e6e; bottom: 0; left: 30px; border-radius: 20px; transition: all 0.3s linear;}
+        .icon-box2, .icon-box4{background-color: #009ea7; position: absolute; width: 239.75px; height: 227.78px; top: 0; left: 30px; border-radius: 20px; transition: all 0.3s linear;}
+        /* .icon-box1:hover, .icon-box2:hover, .icon-box3:hover, .icon-box4:hover{width: 100%; height: 100%; left: 0;} */
+        .icon-box1:hover .icon1, .icon-box2:hover .icon2, .icon-box3:hover .icon3, .icon-box4:hover .icon4{}
+        .icon1{position: absolute; top: 20px; left: 80px; transition: all 0.3s linear;}
+    
+        .icon2{position: absolute; top: 20px; left: 75px; transition: all 0.3s linear;}
+        .icon3{position: absolute; width: 110px; height: 90px; left: 65px; top: 20px; transition: all 0.3s linear;}
+        .icon4{position: absolute; width: 90px; height: 90px; left: 75px; top: 20px; transition: all 0.3s linear;}
+        .span4, .span5, .span6, .span7{ font-size: 26px; color: #ffffff; font-family: 'NanumSquareNeo'; font-weight: bold; position: absolute; top: 150px; left: 50px;}
+        .span4{top: 150px; left: 50px; }
+        .span5{top: 150px; left: 20px; }
+        .span6{top: 150px; left: 35px; }
+        .span7{top: 150px; left: 45px; }
+        .te4, .te5, .te6, .te7{opacity: 0;}
+
+
+        /* input{background-image: url('img/m1.png'); background-repeat: no-repeat; background-position: right 30px center; background-size: 25px 25px;} */
+        
+        /* 섹션 4 */
+        #section4{background-image: url(img/ful4.png); opacity: 0.3;}
+
+        /* 섹션 5 */
+        #section5{background-image: url(img/ful5.png); margin-top: 28px;}
+        
         /* 푸터 */
         footer{width: 100%; height: 300px; background-color: black; position: absolute; bottom: 0;}
         .link1{width: 100%; height: 110px; border: 1px solid #333333;}
@@ -406,8 +470,66 @@
 
 
                         });
+                       
+             
+            $('#box1, #box2, #box3').hover(
+            function () {
+                $(this).addClass('on');
+            },
+            function () {
+                $(this).removeClass('on');
+            }
+            );
 
-                        });
+
+            [1, 2, 3, 4].forEach(function(i) {
+            $(`.icon-box${i}, .back${i}`).hover(
+                function () {
+                // 공통 동작
+                $(`.bot${i}`).css('height', '0');
+                $(`.back${i}`).css('border-radius', '20px');
+                $(`.icon-box${i}`).css({ width: '100%', height: '100%', left: '0' });
+
+                // 개별 icon 위치
+                if (i === 1) {
+                    $('.icon1').css({ top: '100px', left: '115px' });
+                    $('.span4').css({ top: '190px', left: '90px' });
+                } else if (i === 2) {
+                    $('.icon2').css({ top: '110px', left: '120px' });
+                    $('.span5').css({ top: '130px', left: '70px' });
+                } else if (i === 3) {
+                    $('.icon3').css({ top: '105px', left: '110px' });
+                    $('.span6').css({ top: '150px', left: '50px' });
+                } else if (i === 4) {
+                    $('.icon4').css({ top: '108px', left: '118px' });
+                    $('.span7').css({ top: '145px', left: '65px' });
+                }
+                },
+                function () {
+                // 공통 복구
+                $(`.bot${i}`).css('height', '100px');
+                $(`.back${i}`).css('border-radius', '0');
+                $(`.icon-box${i}`).css({ width: '', height: '', left: '' });
+
+                // 개별 icon 원위치
+                if (i === 1) {
+                    $('.icon1').css({ top: '20px', left: '80px' });
+                    $('.span4').css({ top: '150px', left: '50px' });
+                } else if (i === 2) {
+                    $('.icon2').css({ top: '20px', left: '75px' });
+                    $('.span5').css({ top: '150px', left: '20px' });
+                } else if (i === 3) {
+                    $('.icon3').css({ top: '20px', left: '65px' });
+                    $('.span6').css({ top: '150px', left: '35px' });
+                } else if (i === 4) {
+                    $('.icon4').css({ top: '20px', left: '75px' });
+                    $('.span7').css({ top: '150px', left: '45px' });
+                }
+                }
+            );
+
+            });
+            });
             
 
     </script>
@@ -684,15 +806,107 @@
         <div class="section" id="section2">
             <div class="container2">
                 <div class="text2">
-                    <p>Walt Disney<br> 02</p>
+                    <h1>Our Business</h1>
+                    <p class="pp">여객, 물류 운항 뿐만 아니라 국제업무단지 및 공항복합도시로써 글로벌 허브 산업으로 확장하고 있습니다.</p>
                 </div>
-            </div>
+                <div class="bbo">
+                    <div id="box1">
+                    <div class="hobo1"></div>
+                    <img src="img/busi1.png" class="bus1">
+                    <span class="span1">물류서비스<img src="img/menu.png"></span>
+                    <p class="te1">인천 공항은 가장 스마트하고<br>
+                    신뢰할 수 있는 글로벌 물류의 허브입니다.</p>
+                    </div>
+                    <div id="box2">
+                    <div class="hobo2"></div>
+                    <img src="img/busi2.png" class="bus2">
+                    <span class="span2">복합도시개발<img src="img/menu.png"></span>
+                    <p class="te2">동북아시아의 대표적인 관광, 비즈니스 허브를<br>
+                    목표로 공항복합도시(Airport City) 개발을<br>
+                    추진하고 있습니다.</p>
+                    </div>
+                    <div id="box3">
+                    <div class="hobo3"></div>
+                    <img src="img/busi3.png" class="bus3">
+                    <span class="span3">해외사업<img src="img/menu.png"></span>
+                    <p class="te3">전 세계 항공 수요의 꾸준한 증가로 인해<br>
+                    기존 공항 현대화 및 신공항 건설 등 공항 개발을<br>
+                    추진하고 있습니다.</p>
+                    </div>
+                    <div class="cl1"><img src="img/cloud1.png"></div>
+                    <div class="cl2"><img src="img/cloud2.png"></div>
+                    <div class="cl3"><img src="img/cloud3.png"></div>
+                    <div class="cl4"><img src="img/cloud4.png"></div>
+                    </div>
+                </div>
         </div>
 
         <div class="section" id="section3">
+            
             <div class="container3">
                 <div class="text3">
-                    <p>Walt Disney<br> 03</p>
+                    <h1 class="h2">One-Stop Support</h1>
+                    <p class="pp2">여러 업체들과의 상생과 지역발전을 목적으로 다양한 업무지원 서비스를 제공하고 있습니다.</p>
+                </div>
+                <div class="bbo2">
+                    <div id="box4">
+                        <img src="img/back1.png" class="back1">
+                        <div class="bot1"></div>
+                            <div class="icon-box1">
+                            <img src="img/icon3-1.png" class="icon1">
+                            <span class="span4">출입증/촬영</span>
+                            <p class="te4">인천국제공항 보호구역내<br>
+                                인원 및 차량이 출입하거나<br>
+                                사진촬영이 필요한 경우,<br>
+                                절차에 따라 보안교육을 이수하고<br>
+                                출입증을 신청해야 합니다.</p>
+                            <div class="see1">자세히 보기</div>
+                        </div>
+                    </div>
+                    <div id="box5">
+                        <img src="img/back2.png" class="back2">
+                        <div class="bot2"></div>
+                            <div class="icon-box2">
+                            <img src="img/icon3-2.png" class="icon2">
+                            <span class="span5">입주자 서비스센터</span>
+                            <p class="te5">입주자 서비스센터는<br>
+                            인천공항 내에 입점한 입주자의<br>
+                            성공적인 공항 사업 운영을 위하여<br>
+                            다양한 서비스를 제공합니다.<br>
+                            <div class="see2">자세히 보기</div>
+                        </div>
+                    </div>
+                    <div id="box6">
+                        <img src="img/back3.png" class="back3">
+                        <div class="bot3"></div>
+                            <div class="icon-box3">
+                            <img src="img/icon3-3.png" class="icon3">
+                            <span class="span6">부서별 업무검색</span>
+                            <input type="text" placeholder="      찾으시는 업무를 입력하세요.">
+                            <p class="te6">인천공항공사의 주요부서와<br>
+                                핵심 업무를 간편하게 검색하여<br>
+                                사진촬영이 필요한 경우,<br>
+                                찾아볼 수 있습니다.</p>
+                            <div class="see3">자세히 보기</div>
+                        </div>
+                    </div>
+                    <div id="box7">
+                        <img src="img/back4.png" class="back4">
+                        <div class="bot4"></div>
+                            <div class="icon-box4">
+                                <img src="img/icon3-4.png" class="icon4">
+                                <span class="span7">상업시설 임대</span>
+                                <p class="te7">인천공항 여객터미널 내<br>
+                                    영업활동을 목적으로<br>
+                                    사진촬영이 필요한 경우,<br>
+                                    사용되는 상업시설에 대하여<br>
+                                    임대를 관리하고 있습니다.</p>
+                                <div class="see4">자세히 보기</div>
+                            </div>
+                    </div>
+
+                   
+                </div>
                 </div>
             </div>
         </div>
