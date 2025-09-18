@@ -403,14 +403,52 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
         
+
+        /* 탑 제목 */
         .wraptop{width: 100%; height: 450px; border: 1px solid red;}
         .topinner{width: 100%; height: 420px; display: flex; align-items: center;
             background-image: url(img/hi.jpg); background: no-repeat center center cover; }
         .topinner_center{width: 100%; padding: 0 30px; height: 90px; border: 1px solid red;}
         .topinner_ye{color: #fadd1c; font-size: 22px; text-align: center; border: 1px solid red;}
         .topinner_bigt{font-family: 'rix'; font-size: 40px; color: #fff; text-align: center; border: 1px solid red;}
+
+
+        /* 푸터 */
+        footer{width: 100%; height: 300px; background-color: black; border: 1px solid red;}
+        .link1{width: 100%; height: 110px; border: 1px solid #333333;}
+        .link{display: flex; margin-left: 5.9%; height: 110px; margin-top: 45px;}
+        .link li{list-style: none;  justify-content: center; list-style: none; margin: 0; position: relative; }
+        .link li a{display: inline-block; font-size: 17px; color: #989898;   border-right: 1px solid #989898; line-height: 10px!important;  padding: 0 15px; text-decoration: none;}
+        .link li:nth-child(2) a{font-size: 17px; color: #FFee00;}
+        .link li p{ height: 1px; background-color: white; width: 0%; margin-top: 0px; transition: width 0.4s ease; transform-origin: left; z-index: 2000;}
+        .link li:hover p {width: 100%; }
+        .link li:hover a { color: white;}
+        .link li:hover:nth-child(2) a{ color: #FFee00;}
+        .link li:hover:nth-child(2) p{ background-color: #FFee00;}
+        .bottom{width: 188px; height: 72px; margin-left: 6%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; margin-top:80px;}
+
+        
+        /* footer{opacity: 0; transform: translateY(180px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;}
+        footer.show-footer {opacity: 1; transform: translateY(0);} */
+        .footer-info { display: flex; flex-direction: column; margin-left: 750px; position: relative; top: -80px;}
+        .footer-info dl { display: flex; justify-content: space-between; width: 50%; font-size: 16px; gap: 15px; font-family: 'NanumSquareNeo';}
+        .footer-info dl:nth-child(1) { display: flex; justify-content: space-between; width: 50%; font-size: 16px; gap: 90px; font-family: 'NanumSquareNeo';}
+        .footer-info dt { text-align: left; color: #03b4dc; white-space: nowrap; flex-shrink: 0; font-family: 'NanumSquareNeo';}
+        .footer-info dd {text-align: right; white-space: nowrap; flex-shrink: 0; color: white; font-family: 'NanumSquareNeo';}
+        .footer-r{position: absolute; width: 200px; height: 50px;}
+        .footer-r ul{width: 150px; height: 20px;  margin-top: -30px; margin-left: 1270px; }
+        .footer-r ul li{height: 20px; display: inline; padding-left: 10px; }
+        .footer-r ul li a{width: 25px; height: 25px; font-family: 'NanumSquareNeo';}
+        .footer-r>img{position: absolute; height: 40px; width: 55px; left: 1210px; top: -40px; }
+        .sns1{height: 20px; cursor: pointer;}
+        .sns2, .sns3, .sns4{height: 20px;}
+        .family-site{width: 243px; height: 45px; border: 1px solid white; background-color: black; color: white; font-size: 18px; text-align: left; padding: 0 10px 0 10px; position: absolute; left: 1430px; top: -40px;}
+        .family-site>img{position: absolute; top: 15px; right: 10px;}
+        .pl{font-size: 14px; color: #989898; width: 500px; font-family: 'NanumSquareNeo'; margin-top: 20px; margin-left: 1210px;}
         
         
+
+        /* 반응형 */
         @media screen and (max-width:1470px) {
             .header2>ul {
                 width: 600px;
@@ -419,6 +457,7 @@
             .header2>ul li {
                 width: 150px;
             }
+
         }
 
         @media screen and (max-width:1210px) {
@@ -1019,5 +1058,72 @@
         </section>
         <!------- /만족도 조사 ------->
     </main>
+    <footer>
+        <div class="link1"> 
+            <ul class="link">
+                <li><a href="#">이용약관</a>
+                    <p></p>
+                </li>
+                <li><a href="#">개인정보처리방침</a>
+                    <p></p>
+                </li>
+                <li><a href="#">영상정보처리기기 운영관리 방침</a>
+                    <p></p>
+                </li>
+                <li><a href="#">항공안전신고</a>
+                    <p></p>
+                </li>
+                <li><a href="#">저작권보호정책</a>
+                    <p></p>
+                </li>
+                <li><a href="#">이메일 주소 무단 수집 거부</a>
+                    <p></p>
+                </li>
+                <li><a href="#">시각장애인 이용안내</a>
+                    <p></p>
+                </li>
+                <li><a href="#">물류서비스</a>
+                    <p></p>
+                </li>
+                <li><a href="#">복합도시개발</a>
+                    <p></p>
+                </li>
+                <li><a href="#">MRO</a>
+                    <p></p>
+                </li>
+                <li><a href="#">해외사업/교육</a>
+                    <p></p>
+                </li>
+            </ul>
+        </div> 
+        <div class="bottom">
+            <img src="img/footer-logo.png">
+            <div class="footer-info">
+                <dl>
+                    <dt>인천국제공항공사</dt>
+                    <dd>22382 인천광역시 중구 공항로 424번길 47</dd>
+                </dl>
+                <dl>
+                    <dt>인천국제공항 제1 여객터미널</dt>
+                    <dd>22382 인천광역시 중구 공항로 272</dd>
+                </dl>
+                <dl>
+                    <dt>인천국제공항 제2 여객터미널</dt>
+                    <dd>22382 제2터미널대로 446</dd>
+                </dl>
+            </div>
+            <div class="footer-r">
+                <img src="img/web.png">
+                <ul>
+                    <li><a href="#"><img src="img/sns1.png" class="sns1"></a></li>
+                    <li><a href="#"><img src="img/sns2.png" class="sns2"></a></li>
+                    <li><a href="#"><img src="img/sns3.png" class="sns3"></a></li>
+                    <li><a href="#"><img src="img/sns4.png" class="sns4"></a></li>
+                </ul>
+                <button class="family-site">관련 사이트<img src="img/bottom-arrow.png"></button>
+                <p class="pl"> Copyright Incheon International Airport Corporation. All rights reserved. </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
