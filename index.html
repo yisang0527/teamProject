@@ -26,7 +26,7 @@
         html,body{height: 100%; width: 100%; color: #333;}
         header{width: 100%; position: fixed; left: 0; top: 0; z-index: 1000; height: 110px;}
         ul{list-style: none;}
-        a{text-decoration: none; color: #333;}
+        a{text-decoration: none; color: #333; display: block;}
 
         /* header */
         /* .header1 */
@@ -403,15 +403,45 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
         
-
+        /* ----- 메인 ----- */
         /* 탑 제목 */
-        .wraptop{width: 100%; height: 450px; border: 1px solid red;}
+        .wraptop{width: 100%; height: 450px;}
         .topinner{width: 100%; height: 420px; display: flex; align-items: center;
-            background-image: url(img/hi.jpg); background: no-repeat center center cover; }
-        .topinner_center{width: 100%; padding: 0 30px; height: 90px; border: 1px solid red;}
-        .topinner_ye{color: #fadd1c; font-size: 22px; text-align: center; border: 1px solid red;}
-        .topinner_bigt{font-family: 'rix'; font-size: 40px; color: #fff; text-align: center; border: 1px solid red;}
-
+            padding-top: 80px; background: url(img/hi.jpg) no-repeat center center; }
+        .topinner_center{width: 100%; padding: 0 30px; height: 90px;}
+        .topinner_ye{color: #fadd1c; font-size: 22px; text-align: center; margin-bottom: 5px;}
+        .topinner_bigt{font-family: 'rix'; font-size: 40px; color: #fff; text-align: center;}
+        /* 탑 서브 내비 */
+        .naviinner{border: 1px solid red; width: 100%; height: 60px; padding: 0 30px;
+            display: flex; align-items: center; margin-top: -30px;}
+        .subnavi{width: 100%; height: 60px; background-color: #09a2a7;}
+        /* 좌측 내비 */
+        .navibox{width: 100%; display: flex;}
+        .home a{width: 160px; height: 60px;
+            background: url(img/hilogo.png) no-repeat center center;}
+        
+        .navmenu1, 
+        .navmenu2, 
+        .navmenu3{width: 100%;}
+        
+        button{border: none; margin: 0; font-family: 'NanumSquareNeo'; cursor: pointer;}
+        
+        .navbtn1, 
+        .navbtn2, 
+        .navbtn3{width: 100%; height: 60px; background: url(img/downa.png) no-repeat right center; 
+            padding: 0 50px 0 20px; position: relative;}
+        
+        .navbtn1 span,
+        .navbtn2 span,
+        .navbtn3 span{font-size: 17px; color: #fff;}
+        
+        .navbtn1::after,
+        .navbtn2::after{content: ''; position: absolute; right: 0; top: 24px;
+            width: 1px; height: 10px; background: rgba(255, 255, 255, .2);}
+        /* 좌측 내비 서브 */
+        .sublist1{width: 200px; max-height: 200px; overflow: hidden;
+            background-color: #fff; box-shadow: 0px 5px 10px rgba(0, 0, 0, .1);}
+        .sublist1 a{padding: 12px 25px; background: url(img/menu-hover.png) no-repeat right center;}
 
         /* 푸터 */
         footer{width: 100%; height: 300px; background-color: black; border: 1px solid red;}
@@ -857,9 +887,8 @@
     
     
     
-    
+    <!------- 메인 -------->
     <main>
-    <!------- 탑 -------->
     <!-- 탑 제목 -->
         <section class="wraptop">
             <div class="topinner">
@@ -875,8 +904,8 @@
                 <!-- 탑 서브 좌측 내비 -->
                 <div class="subnavi">
                     <ul class="navibox">
-                        <li>
-                            <a href="#" aria-label="홈링크"></a>
+                        <li class="home">
+                            <a href="#" aria-label="홈링크" title="홈"></a>
                         </li>
                         <li>
                             <div class="navmenu1">
@@ -884,10 +913,7 @@
                             </div>
                             <div class="sublist1">
                                 <a href="#"><span>공사소개</span></a>
-                                <a href="#"><span>ESG 경영</span></a>
-                                <a href="#"><span>정보공개</span></a>
                                 <a href="#"><span>고객소통</span></a>
-                                <a href="#"><span>주요사업</span></a>
                                 <a href="#"><span>업무지원</span></a>
                                 <a href="#"><span>인재채용</span></a>
                                 <a href="#"><span>기타</span></a>
@@ -1058,6 +1084,7 @@
         </section>
         <!------- /만족도 조사 ------->
     </main>
+    <!------- 메인 ------->
     <footer>
         <div class="link1"> 
             <ul class="link">
