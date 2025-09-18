@@ -27,8 +27,8 @@
 
         html,
         body {
-            height: 100%;
             width: 100%;
+            height: auto;
         }
 
         /* header */
@@ -538,6 +538,7 @@
             height: 100%;
             border-top: 1px solid #333;
             border-bottom: 1px solid #ccc;
+            padding-bottom: 75px;
         }
 
         .siteBig {
@@ -579,6 +580,235 @@
             color: #009ea7;
         }
 
+        /* survay */
+        .survey {
+            width: 77%;
+            height: 160px;
+            margin: 150px auto 50px;
+            border: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .surveyTitle {
+            width: 95%;
+            height: 40px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+
+        .surveyTitle p {
+            margin-left: 10px;
+            line-height: 40px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .boxForm {
+            width: 95%;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        label {
+            margin-right: 40px;
+        }
+
+        label>span {
+            font-weight: 500;
+        }
+
+        #opinion {
+            width: 380px;
+            height: 50px;
+            padding-left: 20px;
+            border: 1px solid #ccc;
+        }
+
+        #checkbtn {
+            width: 120px;
+            height: 50px;
+            background-color: #3176d0;
+            border: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        /* footer */
+        footer {
+            width: 100%;
+            height: 250px;
+            background-color: #141822;
+        }
+
+        .footer1 {
+            border-bottom: 1px solid #333;
+            width: 100%;
+            height: 30%;
+        }
+
+        .footer1 ul {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer1 ul li {
+            margin-right: 15px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer1 ul li a {
+            color: #989898;
+        }
+
+        .footer1 ul li p {
+            width: 0%;
+            height: 2px;
+            background-color: #eee;
+            transition: all 0.5s;
+        }
+
+        .footer1 ul li:hover a {
+            color: #eee;
+        }
+
+        .footer1 ul li:hover p {
+            width: 100%;
+        }
+
+        .footer2 {
+            width: 100%;
+            height: 70%;
+            position: relative;
+        }
+
+        .footerLogo {
+            position: absolute;
+            top: 50%;
+            left: 5.5%;
+            transform: translateY(-50%);
+            display: inline-block;
+        }
+
+        .footerText {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translateY(-50%);
+            display: flex;
+        }
+
+        .footerText1 p {
+            margin-right: 20px;
+            color: #03b4dc;
+        }
+
+        .footerText2 p {
+            color: white;
+        }
+
+        .footerInpor {
+            width: 600px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: end;
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+        }
+
+        .footerSns {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .footerSns img:nth-of-type(1) {
+            height: 80%;
+        }
+
+        .footerSns img {
+            margin-right: 18px;
+            height: 45%;
+        }
+
+        .footerInpor>p {
+            color: #787b83;
+            font-size: 14px;
+        }
+
+        .footerBig>li {
+            width: 250px;
+            padding: 10px;
+            border: 1px solid #eee;
+        }
+
+        .footerBig>li:hover {
+            cursor: pointer;
+        }
+
+        .footerBig>li a {
+            color: #eee;
+        }
+
+        .footerSmall {
+            display: none;
+            position: absolute;
+            bottom: 100px;
+            right: 0;
+            width: 250px;
+            background-color: #141822;
+            padding: 10px;
+            max-height: 200px;
+            overflow: scroll;
+            overflow-x: hidden;
+            transition: all 0.7s;
+        }
+
+        .footerSmall p {
+            color: #ccc;
+            margin-bottom: 5px;
+        }
+
+        @media screen and (max-width:1919px) {
+            .left {
+                display: none;
+            }
+
+            .right {
+                width: 95%;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        @media screen and (max-width:1520px) {
+            .footer1 ul {
+                flex-wrap: wrap;
+            }
+
+            .footer1 ul li {
+                height: 10%;
+            }
+        }
+
         @media screen and (max-width:1470px) {
             .siteNav {
                 width: 90%;
@@ -611,6 +841,64 @@
             .siteSmall>li>a {
                 font-size: 15px;
             }
+
+            .survey {
+                width: 90%;
+            }
+        }
+
+        @media screen and (max-width:1400px) {
+            .footerLogo img {
+                width: 60%;
+            }
+
+            .footerText {
+                left: 15%;
+            }
+
+            .footerText1 p {
+                font-size: 14px;
+            }
+
+            .footerText2 p {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width:1350px) {
+            .header2 .list1 .right {
+                width: 90%;
+            }
+
+            .header2 .list2 .right {
+                width: 90%;
+            }
+
+            .header2 .list2 .big>li {
+                width: 300px;
+            }
+
+            .header2 .list3 .right {
+                width: 90%;
+            }
+
+            .header2 .list3 .big>li {
+                width: 300px;
+            }
+
+            .header2 .list4 .right {
+                width: 90%;
+            }
+
+            .header2 .list4 .big>li {
+                width: 300px;
+            }
+        }
+
+        @media screen and (max-width:1240px) {
+            #opinion {
+                width: 250px;
+            }
         }
 
         @media screen and (max-width:1210px) {
@@ -639,6 +927,54 @@
 
             .siteSmall>li>a {
                 font-size: 14px;
+            }
+
+            footer {
+                height: 400px;
+            }
+
+            .footerLogo {
+                top: 5%;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+            }
+
+            .footerLogo img {
+                width: 80%;
+            }
+
+            .footerText {
+                top: 35%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .footerInpor {
+                top: 63%;
+                left: 46%;
+                transform: translateX(-50%);
+            }
+        }
+
+        @media screen and (max-width:1090px) {
+            .boxForm {
+                height: 100px;
+                flex-direction: column;
+                align-items: start;
+                justify-content: space-around;
+            }
+
+            .boxInput {
+                width: 100%;
+            }
+
+            #opinion {
+                width: 79.5%;
+            }
+
+            #checkbtn {
+                width: 19.5%;
             }
         }
 
@@ -674,7 +1010,6 @@
                 justify-content: space-around;
             }
         }
-
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -694,9 +1029,29 @@
                 if (darkmode) {
                     $(".siteList").addClass("dark");
                     $(this).attr("src", "img/darkMode2-1.png");
+                    $(".textLeft p:nth-of-type(2)").css("color", "#eee");
+                    $(".textHead p").css("color", "#eee");
+                    $(".textRight").css({
+                        "border-top": "1px solid #eee",
+                        "border-bottom": "1px solid #aaa"
+                    });
+                    $(".textRight a").css("color", "#eee");
+                    $(".surveyTitle img").attr("src", "img/survey2.png");
+                    $(".surveyTitle p").css("color", "#eee");
+                    $("label>span").css("color", "#eee");
                 } else {
                     $(".siteList").removeClass("dark");
                     $(this).attr("src", "img/darkMode1.png");
+                    $(".textLeft p:nth-of-type(2)").css("color", "#333");
+                    $(".textHead p").css("color", "#333");
+                    $(".textRight").css({
+                        "border-top": "1px solid #333",
+                        "border-bottom": "1px solid #ccc"
+                    });
+                    $(".textRight a").css("color", "#333");
+                    $(".surveyTitle img").attr("src", "img/survey.png");
+                    $(".surveyTitle p").css("color", "#333");
+                    $("label>span").css("color", "#333");
                 }
             });
 
@@ -711,32 +1066,24 @@
                 $(".header2 .list").not(listSel).stop(true, true).fadeOut(200).removeClass("visible");
                 $(listSel).stop(true, true).fadeIn(300).addClass("visible");
 
-                // 호버된 a 태그 색상 항상 #333
                 $(".header2>ul li a").css("color", "#333");
-                $(this).find("a").css("color", "#009ea7"); // 호버된 a 강조
-
-                $(".header2>ul li a").removeClass("active");
-                $(this).find("a").addClass("active");
+                $(this).find("a").css("color", "#009ea7");
 
                 $(".header2").addClass("menu-open");
             });
 
             $(".header2 .textArea").on("mouseleave", function () {
-                // 메뉴 호버가 종료될 때 배경과 글자색 결정
                 if ($(window).scrollTop() > 0) {
-                    // 스크롤 내려간 상태
                     $(".header2").css("background-color", "white");
                     $(".header2>ul li a").css("color", "#333");
                     $(".logo2 img").attr("src", "img/logo2.png");
                 } else {
-                    // 최상단 상태
                     $(".header2").css("background-color", "transparent");
-                    $(".header2>ul li a").css("color", "white"); // 최상단에서는 흰색 유지
+                    $(".header2>ul li a").css("color", "white");
                     $(".logo2 img").attr("src", "img/logo1.png");
                 }
 
                 $(".header2 .list").stop(true, true).fadeOut(200).removeClass("visible");
-                $(".header2>ul li a").removeClass("active");
                 $(".header2").removeClass("menu-open");
             });
 
@@ -744,17 +1091,14 @@
             // 메뉴 a 태그 호버 색상
             $(".header2>ul li a").hover(
                 function () {
-                    $(this).css("color", "#009ea7"); // 호버 시 강조
-                    $(this).addClass("active");
+                    $(this).css("color", "#009ea7");
                 },
                 function () {
-                    // hover 해제 시 색상은 스크롤 상태에 따라 결정
                     if ($(window).scrollTop() > 0 || $(".header2").hasClass("menu-open")) {
                         $(this).css("color", "#333");
                     } else {
-                        $(this).css("color", "#333"); // 최상단에서도 #333
+                        $(this).css("color", "#333");
                     }
-                    $(this).removeClass("active");
                 }
             );
 
@@ -792,10 +1136,41 @@
                 } else {
                     // 최상단
                     $(".header2").css("background-color", "transparent");
-                    $(".header2>ul li a").css("color", "white"); // 최상단에서는 흰색 유지
+                    $(".header2>ul li a").css("color", "white");
                     $(".logo2 img").attr("src", "img/logo1.png");
                 }
             });
+
+            // footer 관련사이트 목록
+            $(".footerBig").click(function () {
+                $(this).find(".footerSmall").fadeToggle();
+            });
+
+            // site.png hover & scroll 처리
+            $(".header2>ul li, .textArea").hover(
+                function () {
+                    // hover 시 무조건 site2.png
+                    $(".header2 > a img").attr("src", "img/site2.png");
+                },
+                function () {
+                    // hover 해제 시 스크롤 상태에 따라 변경
+                    if ($(window).scrollTop() > 0) {
+                        $(".header2 > a img").attr("src", "img/site2.png");
+                    } else {
+                        $(".header2 > a img").attr("src", "img/site.png");
+                    }
+                }
+            );
+
+            // 스크롤 이벤트
+            $(window).on("scroll", function () {
+                if ($(window).scrollTop() > 0) {
+                    $(".header2 > a img").attr("src", "img/site2.png");
+                } else {
+                    $(".header2 > a img").attr("src", "img/site.png");
+                }
+            });
+
         });
     </script>
 </head>
@@ -836,7 +1211,7 @@
             </ul>
 
             <a href="#">
-                <img src="img/ham.png" alt="사이트맵 버튼">
+                <img src="img/site.png" alt="사이트맵 버튼">
             </a>
 
             <div class="list list1">
@@ -1246,6 +1621,155 @@
                     </div>
                 </div>
             </div>
+
+            <div class="survey">
+                <div class="surveyTitle">
+                    <img src="img/survey.png" alt="만족도조사">
+                    <p>콘텐츠 만족도 조사</p>
+                </div>
+
+                <div class="boxForm">
+                    <div class="boxRadio">
+                        <label for="score_5" class="cm-radio style1">
+                            <input type="radio" name="score" id="score_5" title="매우만족" checked="checked" value="5"
+                                class="needsclick">
+                            <span>매우만족</span>
+                        </label>
+
+                        <label for="score_4" class="cm-radio style1">
+                            <input type="radio" name="score" id="score_4" title="만족" value="4" class="needsclick">
+                            <span>만족</span>
+                        </label>
+
+                        <label for="score_3" class="cm-radio style1">
+                            <input type="radio" name="score" id="score_3" title="보통" value="3" class="needsclick">
+                            <span>보통</span>
+                        </label>
+
+                        <label for="score_2" class="cm-radio style1">
+                            <input type="radio" name="score" id="score_2" title="불만족" value="2" class="needsclick">
+                            <span>불만족</span>
+                        </label>
+
+                        <label for="score_1" class="cm-radio style1">
+                            <input type="radio" name="score" id="score_1" title="매우불만족" value="1" class="needsclick">
+                            <span>매우불만족</span>
+                        </label>
+                    </div>
+
+                    <div class="boxInput">
+                        <input type="text" id="opinion" name="opinion" placeholder="※ 콘텐츠 개선의견을 남겨주세요"
+                            title="※ 콘텐츠 개선의견을 남겨주세요" class="needsclick">
+                        <button type="button" id="checkbtn" title="확인">참여하기</button>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <div class="footer1">
+                    <ul>
+                        <li><a href="#">이용약관</a>
+                            <p></p>
+                        </li>
+                        <li><a href="#">개인정보처리방침</a>
+                            <p></p>
+                        </li>
+                        <li><a href="#">영상정보처리기기 운영관리 방침</a>
+                            <p></p>
+                        </li>
+                        <li><a href="#">항공안전신고</a>
+                            <p></p>
+                        </li>
+                        <li><a href="#">저작권보호정책</a>
+                            <p></p>
+                        </li>
+                        <li><a href="#">이메일 주소 무단 수집 거부</a>
+                            <p></p>
+                        </li>
+                        <li><a href="#">시각장애인 이용안내</a>
+                            <p></p>
+                        </li>
+                        <li><a href="#">물류서비스</a>
+                            <p></p>
+                        </li>
+                        <li><a href="#">복합도시개발</a>
+                            <p></p>
+                        </li>
+                        <li><a href="#">MRO</a>
+                            <p></p>
+                        </li>
+                        <li><a href="#">해외사업/교육</a>
+                            <p></p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer2">
+                    <div class="footerLogo">
+                        <img src="img/footer-logo.png" alt="푸터 로고 이미지">
+                    </div>
+
+                    <div class="footerText">
+                        <div class="footerText1">
+                            <p>인천국제공항공사</p>
+                            <p>인천국제공항 제1 여객터미널</p>
+                            <p>인천국제공항 제2 여객터미널</p>
+                        </div>
+
+                        <div class="footerText2">
+                            <p>22382 인천광역시 중구 공항로 424번길 47</p>
+                            <p>22382 인천광역시 중구 공항로 272</p>
+                            <p>22382 인천광역시 중구 제2터미널대로 446</p>
+                        </div>
+                    </div>
+
+                    <div class="footerInpor">
+                        <div class="footerSns">
+                            <img src="img/web.png" alt="웹표준 이미지">
+                            <img src="img/sns1.png" alt="sns 이미지">
+                            <img src="img/sns2.png" alt="sns 이미지">
+                            <img src="img/sns3.png" alt="sns 이미지">
+                            <img src="img/sns4.png" alt="sns 이미지">
+
+                            <ul class="footerBig">
+                                <li><a href="#">관련사이트</a>
+                                    <div class="footerSmall">
+                                        <p>전자입찰시스템</p>
+                                        <p>인터넷청구시스템</p>
+                                        <p>항공물류정보시스템</p>
+                                        <p>항공보안교육원</p>
+                                        <p>Aviation Academy</p>
+                                        <p>운항자료서비스</p>
+                                        <p>적재대관리 홈페이지</p>
+                                        <p>인천공항 인재개발원</p>
+                                        <p>인천공항 공항산업기술연구원</p>
+                                        <p>인천공항 스카이몬스</p>
+                                        <p>인천공항에너지(주)</p>
+                                        <p>인천공항시설관리(주)</p>
+                                        <p>인천공항운영서비스(주)</p>
+                                        <p>인천공항공항보안(주)</p>
+                                        <p>입주자서비스포탈</p>
+                                        <p>국토교통부 홈페이지</p>
+                                        <p>인천국제공항경찰단</p>
+                                        <p>외교부 안전여행</p>
+                                        <p>언어가 안통할때</p>
+                                        <p>도로명주소안내</p>
+                                        <p>해외감염병NOW</p>
+                                        <p>한국공항공사</p>
+                                        <p>안전Dream</p>
+                                        <p>관세청</p>
+                                        <p>출입국외국인정책본부</p>
+                                        <p>안전관리정보시스템</p>
+                                        <p>계약 및 시설관리시스템</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <p>Copyright Incheon International Airport Corporation. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
         </div>
     </main>
 </body>
