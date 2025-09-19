@@ -412,11 +412,11 @@
         .topinner_ye{color: #fadd1c; font-size: 22px; text-align: center; margin-bottom: 5px;}
         .topinner_bigt{font-family: 'rix'; font-size: 40px; color: #fff; text-align: center;}
         /* 탑 서브 내비 */
-        .naviinner{border: 1px solid red; width: 100%; height: 60px; padding: 0 30px;
-            display: flex; align-items: center; margin-top: -30px;}
-        .subnavi{width: 100%; height: 60px; background-color: #09a2a7;}
+        .naviinner{width: 100%; height: 60px; padding: 0 30px; margin-top: -30px;}
+        .subnavi{max-width: 1480px; height: 60px; background-color: #09a2a7;
+            display: flex; justify-content: space-between; align-items: center; margin: auto;}
         /* 좌측 내비 */
-        .navibox{width: 100%; display: flex;}
+        .navibox{display: flex;}
         .home a{width: 160px; height: 60px;
             background: url(img/hilogo.png) no-repeat center center;}
         
@@ -428,8 +428,8 @@
         
         .navbtn1, 
         .navbtn2, 
-        .navbtn3{width: 100%; height: 60px; background: url(img/downa.png) no-repeat right center; 
-            padding: 0 50px 0 20px; position: relative;}
+        .navbtn3{width: 100%; height: 60px; padding: 0 50px 0 20px; position: relative;
+            background: url(img/downa.png) no-repeat right center;}
         
         .navbtn1 span,
         .navbtn2 span,
@@ -439,16 +439,107 @@
         .navbtn2::after{content: ''; position: absolute; right: 0; top: 24px;
             width: 1px; height: 10px; background: rgba(255, 255, 255, .2);}
         /* 좌측 내비 서브 */
-        .sublist1{width: 200px; max-height: 200px; overflow: hidden;
-            background-color: #fff; box-shadow: 0px 5px 10px rgba(0, 0, 0, .1);}
-        .sublist1 a{padding: 12px 25px; background: url(img/menu-hover.png) no-repeat right center;}
+        .sublist1, 
+        .sublist2, 
+        .sublist3{width: 200px; max-height: 250px; position: absolute; top:450px; z-index: 5;
+            background-color: #fff; box-shadow: 0px 5px 10px rgba(0, 0, 0, .1);
+            display: none;}
+        
+        .sublist1{left: 190px;}
+        .sublist2{left: 320px;}
+        .sublist3{left: 470px;}
+
+        .sublist1 a,
+        .sublist2 a,
+        .sublist3 a{padding: 12px 25px; font-size: 15px;}
+
+        .sublist1 a img,
+        .sublist2 a img,
+        .sublist3 a img{width: 20px; display: block; float: right;
+            border: 1px solid red; display: none;}
+        /* 우측 기능들 */
+        .subend{width: 180px; height: 60px; margin-right: 0;}
+        .subend>ul>li{float: left; width: 60px; height: 60px;}
+        .share{width: 100%; height: 60px; 
+            background: #3176d0 url(img/share.png) no-repeat center center;}
+        .fav{width: 100%; height: 60px; 
+            background: #6eadff url(img/file.png) no-repeat center center;}
+        .print{width: 100%; height: 60px; 
+            background: #152e6e url(img/print.png) no-repeat center center;}
+        /* 본문 제목 */
+        .wrapcontents{width: 100%;}
+        .h1box{max-width: 1480px; margin: auto;}
+        h1{width: 100%; font-size: 40px; margin: 60px 0 50px;}
+        /* 본문 콘텐츠 */
+        .contents{display: flex; margin-top: 40px;
+            padding: 0 ;}
+        .contentsinner{max-width: 1480px; margin: auto; overflow: hidden;
+            display: flex; justify-content: space-between;}
+        /* 글 콘텐츠 */
+        .textbox{width: calc(100% - 535px);}
+        .titlebox{width: 100%; color: #152E6E; font-size: 35px; font-weight: bold; 
+            position: relative; padding: 0 0 30px; line-height: 1.5;}
+        .titlebox::before{
+            content: ""; height: 3px; position: absolute; bottom: 0;
+            background: #152E6E; width: 100%;
+        }
+        .articlebox{margin-top: 40px; padding-bottom: 55px;}
+        .articlebox span p{margin-bottom: 20px; font-size: 18px;}
+        /* 그림 콘텐츠 */
+        .imagebox{width: 430px; margin-top:15px; position: relative;}
+        .imagebox::before{
+            content: '';
+            background: url(img/hibgimg.png) no-repeat center / cover;
+            width: 610px; height: 235px;
+            position: absolute; bottom: -4%; right: 30%; z-index: -1;
+        }
+        .namebox{margin-top: 30px;}
+        .namebox span{font-size: 20px; text-align: right; display: block;}
+        .namebox p{font-size: 30px; font-weight: bold; text-align: right;}
+        /* 만족도 조사 */
+        .wrapunder{width: 100%; margin-top: 50px; margin-bottom: 80px;}
+        .underinner{max-width: 1480px; padding: 0 30px; margin: auto;}
+        .form{width: 100%; height: 160px; border: 1px solid #dbe5e8;
+            padding: 40px 35px 35px;}
+        .formtitle{width: 100%; height: 40px; font-size: 20px; font-weight: bold;}
+        .formtitle::before{content: ''; display: inline-block; vertical-align: middle;
+            width: 40px; height: 40px;margin-right: 10px;
+            background: #f5f5f5 url(img/formimg.png) no-repeat center;
+            border-radius: 100%;
+        }
+        /* 오지선다형 체크 폼 */
+        .formbox{width: 100%; height: 50px; margin-top: 5px; line-height: 50px;
+            display: flex; justify-content: space-between;}
+        .radio label{margin-right: 40px; position: relative;}
+        .radio label input{opacity: 1; position: absolute; left: 3; top: 6px; z-index: 5;}
+        .radio label span{padding-left: 27px; display: inline-block; position: relative;}
+        /* .radio label span::before{
+            content: ''; display: inline-block;
+            width: 16px; height: 16px;
+            border: 1px solid #c6c6c6;
+            border-radius: 100%;
+            position: absolute; left: 0; top: 17px;
+        }
+        .radio label input:checked + span::after {
+            content: ''; background-color: #09a2a7;
+            border: 1px solid #09a2a7;
+        } */
+        /* 텍스트 폼 */
+        .inputbox{display: flex; align-items: center;}
+        .inputbox input{width: 380px; height: 50px; display: block;
+            border: 1px solid #dbe5e8;}
+        .inputbtn{margin-left: 10px; padding: 0 30px; background: #3176d0;
+            height: 50px; color: #fff; font-size: 16px;}
+
+
+
 
         /* 푸터 */
-        footer{width: 100%; height: 300px; background-color: black; border: 1px solid red;}
-        .link1{width: 100%; height: 110px; border: 1px solid #333333;}
-        .link{display: flex; margin-left: 5.9%; height: 110px; margin-top: 45px;}
-        .link li{list-style: none;  justify-content: center; list-style: none; margin: 0; position: relative; }
-        .link li a{display: inline-block; font-size: 17px; color: #989898;   border-right: 1px solid #989898; line-height: 10px!important;  padding: 0 15px; text-decoration: none;}
+        footer{width: 100%; height: 300px; background-color: black; }
+        .link1{width: 100%; height: 110px; border: 1px solid #333333; padding-top: 30px;}
+        .link{display: flex; flex-wrap: wrap; padding-left: 30px;}
+        .link li{justify-content: center; position: relative; }
+        .link li a{display: inline-block; font-size: 17px; color: #989898; border-right: 1px solid #989898; line-height: 10px!important;  padding: 0 15px;}
         .link li:nth-child(2) a{font-size: 17px; color: #FFee00;}
         .link li p{ height: 1px; background-color: white; width: 0%; margin-top: 0px; transition: width 0.4s ease; transform-origin: left; z-index: 2000;}
         .link li:hover p {width: 100%; }
@@ -457,6 +548,8 @@
         .link li:hover:nth-child(2) p{ background-color: #FFee00;}
         .bottom{width: 188px; height: 72px; margin-left: 6%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; margin-top:80px;}
 
+       
+        
         
         /* footer{opacity: 0; transform: translateY(180px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;}
         footer.show-footer {opacity: 1; transform: translateY(0);} */
@@ -466,8 +559,8 @@
         .footer-info dt { text-align: left; color: #03b4dc; white-space: nowrap; flex-shrink: 0; font-family: 'NanumSquareNeo';}
         .footer-info dd {text-align: right; white-space: nowrap; flex-shrink: 0; color: white; font-family: 'NanumSquareNeo';}
         .footer-r{position: absolute; width: 200px; height: 50px;}
-        .footer-r ul{width: 150px; height: 20px;  margin-top: -30px; margin-left: 1270px; }
-        .footer-r ul li{height: 20px; display: inline; padding-left: 10px; }
+        .footer-r ul{width: 150px; height: 45px;  margin-top: -40px; margin-left: 1270px; display: flex; align-items: center;}
+        .footer-r ul li{padding-left: 10px; }
         .footer-r ul li a{width: 25px; height: 25px; font-family: 'NanumSquareNeo';}
         .footer-r>img{position: absolute; height: 40px; width: 55px; left: 1210px; top: -40px; }
         .sns1{height: 20px; cursor: pointer;}
@@ -476,7 +569,7 @@
         .family-site>img{position: absolute; top: 15px; right: 10px;}
         .pl{font-size: 14px; color: #989898; width: 500px; font-family: 'NanumSquareNeo'; margin-top: 20px; margin-left: 1210px;}
         
-        
+        .link1, .link, .footer-r, .footer-r ul{border: 1px solid red;}
 
         /* 반응형 */
         @media screen and (max-width:1470px) {
@@ -489,6 +582,8 @@
             }
 
         }
+        .wrapcontents{width: 90%; margin: auto;}
+        .link li{white-space: nowrap;}
 
         @media screen and (max-width:1210px) {
             .header2>ul {
@@ -912,11 +1007,11 @@
                                 <button class="navbtn1" type="button" title="축소됨" aria-label="축소됨"><span>공사소개</span></button>
                             </div>
                             <div class="sublist1">
-                                <a href="#"><span>공사소개</span></a>
-                                <a href="#"><span>고객소통</span></a>
-                                <a href="#"><span>업무지원</span></a>
-                                <a href="#"><span>인재채용</span></a>
-                                <a href="#"><span>기타</span></a>
+                                <a href="#"><span>공사소개</span><img src="img/menu-hover.png" alt="버튼"></a>
+                                <a href="#"><span>고객소통</span><img src="img/menu-hover.png" alt="버튼"></a>
+                                <a href="#"><span>업무지원</span><img src="img/menu-hover.png" alt="버튼"></a>
+                                <a href="#"><span>인재채용</span><img src="img/menu-hover.png" alt="버튼"></a>
+                                <a href="#"><span>기타</span><img src="img/menu-hover.png" alt="버튼"></a>
                             </div>
                         </li>
                         <li>
@@ -924,10 +1019,10 @@
                                 <button class="navbtn2" type="button" title="축소됨" aria-label="축소됨"><span>CEO메세지</span></button>
                             </div>
                             <div class="sublist2">
-                                <a href="#"><span>CEO메세지</span></a>
-                                <a href="#"><span>일반현황</span></a>
-                                <a href="#"><span>조직</span></a>
-                                <a href="#"><span>홍보센터</span></a>
+                                <a href="#"><span>CEO메세지</span><img src="img/menu-hover.png" alt="버튼"></a>
+                                <a href="#"><span>일반현황</span><img src="img/menu-hover.png" alt="버튼"></a>
+                                <a href="#"><span>조직</span><img src="img/menu-hover.png" alt="버튼"></a>
+                                <a href="#"><span>홍보센터</span><img src="img/menu-hover.png" alt="버튼"></a>
                             </div>
                         </li>
                         <li>
@@ -935,8 +1030,8 @@
                                 <button class="navbtn3" type="button" title="축소됨" aria-label="축소됨"><span>인사말</span></button>
                             </div>
                             <div class="sublist3">
-                                <a href="#"><span>인사말</span></a>
-                                <a href="#"><span>프로필</span></a>
+                                <a href="#"><span>인사말</span><img src="img/menu-hover.png" alt="버튼"></a>
+                                <a href="#"><span>프로필</span><img src="img/menu-hover.png" alt="버튼"></a>
                             </div>
                         </li>
                     </ul>
@@ -945,7 +1040,7 @@
                         <ul>
                             <li>
                                 <button class="share" type="button" title="공유하기 버튼 축소됨" aria-label="공유하기"></button>
-                                <div class="subbox1">
+                                <!-- <div class="subbox1">
                                     <ul>
                                         <li>
                                             <button class="kakao" type="button" type="button" aria-label="카카오톡" title="새창"></button>
@@ -960,18 +1055,18 @@
                                             <button class="close" type="button" aria-label="닫기"></button>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </li>
                             <li>
-                                <button class="fav" type="button" title="즐겨찾기" aria-label="즐겨찾기">즐겨찾기</button>
-                                <div class="subbox2">
+                                <button class="fav" type="button" title="즐겨찾기" aria-label="즐겨찾기"></button>
+                                <!-- <div class="subbox2">
                                     <p>즐겨찾는 메뉴</p>
                                     <button class="closefav" aria-label="닫기" title="닫기"></button>
                                     <div class="control">
                                         <button type="button">메뉴 추가하기</button>
                                         <button type="button">초기화</button>
                                     </div>
-                                </div>
+                                </div> -->
                             </li>
                             <li>
                                 <button class="print" type="button" aria-label="인쇄하기" title="인쇄하기"></button>
@@ -991,44 +1086,46 @@
             </div>
             <!-- 콘텐츠 -->
             <div class="contents">
-                <!-- 글 영역 -->
-                <div class="textbox">
-                    <!-- 글제목 -->
-                    <div class="titlebox">
-                        <p>세계 1등 공항을 넘어<br>
-                            글로벌 공항산업의 창의적 선도자로 도약하겠습니다!</p>
+                <div class="contentsinner">
+                    <!-- 글 영역 -->
+                    <div class="textbox">
+                        <!-- 글제목 -->
+                        <div class="titlebox">
+                            <p>세계 1등 공항을 넘어<br>
+                                글로벌 공항산업의 창의적 선도자로 도약하겠습니다!</p>
+                        </div>
+                        <!-- 글 -->
+                        <div class="articlebox">
+                            <span>
+                                <p>
+                                    안녕하십니까? 인천국제공항공사 사장 이학재입니다.<br>
+                                    인천국제공항 홈페이지를 찾아주신 여러분을 진심으로 환영합니다.</p>
+                                <p>
+                                    지난 2001년 동북아 허브공항을 목표로 개항한 인천국제공항은 국민 여러분의 성원, 정부의 비전과 정책, 7만여 공항 종사자들의 헌신적인 노력에 힘입어 국제화물 2위, 국제여객 5위의 허브공항이자 세계의 하늘길을 잇는 핵심 거점으로 도약할 수 있었습니다.
+                                </p>
+                                <p>
+                                    최근 큰 어려움을 겪었던 코로나19를 지나 항공산업과 공항생태계는 수요 선점을 위한 치열한 경쟁에 직면해 있고, 공항은 산업과 경제 문화를 아우르는 플랫폼으로서의 역할을 요구받고 있습니다. 또한 디지털 기술의 급격한 발전과 모빌리티 혁명은 새로운 기회와 도전의 요소입니다.
+                                </p>
+                                <p>
+                                    이에 우리는 첨단 IT기술을 통한 서비스 혁신이 접목된 제2여객터미널 확장사업을 2024년 성공적으로 마무리하여 여객 중심의 독보적 가치를 만들어가고, 인천공항의 역할을 항공운송의 중심지를 넘어 지역·국가경제 발전 및 관광과 산업발전의 중심지로 확대하여 글로벌 융·복합 메가허브로 재도약하고자 합니다.
+                                </p>
+                                <p>
+                                    국민의 신뢰 속에서 전 세계 공항을 선도해 나가는 초일류 공항이 될 수 있도록 "현장에 답이 있다"는 생각으로 항상 여러분의 소리를 듣겠습니다. 새로운 미래를 만들기 위한 인천국제공항의 끝없는 변화와 도전에 많은 애정과 격려 부탁드립니다.
+                                </p>
+                                <p>
+                                    감사합니다.
+                                </p>
+                            </span>
+                        </div>
                     </div>
-                    <!-- 글 -->
-                    <div class="articlebox">
-                        <span>
-                            <p>
-                                안녕하십니까? 인천국제공항공사 사장 이학재입니다.<br>
-                                인천국제공항 홈페이지를 찾아주신 여러분을 진심으로 환영합니다.</p>
-                            <p>
-                                지난 2001년 동북아 허브공항을 목표로 개항한 인천국제공항은 국민 여러분의 성원, 정부의 비전과 정책, 7만여 공항 종사자들의 헌신적인 노력에 힘입어 국제화물 2위, 국제여객 5위의 허브공항이자 세계의 하늘길을 잇는 핵심 거점으로 도약할 수 있었습니다.
-                            </p>
-                            <p>
-                                최근 큰 어려움을 겪었던 코로나19를 지나 항공산업과 공항생태계는 수요 선점을 위한 치열한 경쟁에 직면해 있고, 공항은 산업과 경제 문화를 아우르는 플랫폼으로서의 역할을 요구받고 있습니다. 또한 디지털 기술의 급격한 발전과 모빌리티 혁명은 새로운 기회와 도전의 요소입니다.
-                            </p>
-                            <p>
-                                이에 우리는 첨단 IT기술을 통한 서비스 혁신이 접목된 제2여객터미널 확장사업을 2024년 성공적으로 마무리하여 여객 중심의 독보적 가치를 만들어가고, 인천공항의 역할을 항공운송의 중심지를 넘어 지역·국가경제 발전 및 관광과 산업발전의 중심지로 확대하여 글로벌 융·복합 메가허브로 재도약하고자 합니다.
-                            </p>
-                            <p>
-                                국민의 신뢰 속에서 전 세계 공항을 선도해 나가는 초일류 공항이 될 수 있도록 "현장에 답이 있다"는 생각으로 항상 여러분의 소리를 듣겠습니다. 새로운 미래를 만들기 위한 인천국제공항의 끝없는 변화와 도전에 많은 애정과 격려 부탁드립니다.
-                            </p>
-                            <p>
-                                감사합니다.
-                            </p>
-                        </span>
-                    </div>
-                </div>
-                <!-- 사진 영역 -->
-                <div class="imagebox">
-                    <img src="img/hiperson.jpg" alt="인천국제공항공사 사장">
-                    <!-- 사진 밑 이름 -->
-                    <div class="namebox">
-                        <span>인천국제공항공사 사장</span>
-                        <p>이학재</p>
+                    <!-- 사진 영역 -->
+                    <div class="imagebox">
+                        <img src="img/hiperson.jpg" alt="인천국제공항공사 사장">
+                        <!-- 사진 밑 이름 -->
+                        <div class="namebox">
+                            <span>인천국제공항공사 사장</span>
+                            <p>이학재</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1053,22 +1150,22 @@
                             </label>
                             <label for="score4">
                                 <input type="radio" id="score4" name="score" title="만족"
-                                    checked="checked" value="4">
+                                    value="4">
                                 <span>만족</span>
                             </label>
                             <label for="score3">
                                 <input type="radio" id="score3" name="score" title="보통"
-                                    checked="checked" value="3">
+                                    value="3">
                                 <span>보통</span>
                             </label>
                             <label for="score2">
                                 <input type="radio" id="score2" name="score" title="불만족"
-                                    checked="checked" value="2">
+                                    value="2">
                                 <span>불만족</span>
                             </label>
                             <label for="score1">
                                 <input type="radio" id="score1" name="score" title="매우불만족"
-                                    checked="checked" value="1">
+                                    value="1">
                                 <span>매우불만족</span>
                             </label>
                         </div>
