@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="src/jquery.fullPage.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
 
     <style>
          @font-face {
@@ -61,10 +63,11 @@
         /* #b1 .blur{width: 100%; height: 46%; background-color: black;  position: fixed; left: 0; top: 54%; opacity: 0.8;} */
         #b1 span, #b2 span, #b3 span, #b4 span{font-size: 18px; color:#333; }
         #b1, #b2, #b3, #b4{list-style: none; position: fixed; width: 100%; height: 370px; background-color: white; border-top: 1px solid #eee; left: 0; top: 16%; padding-left: 6%; padding-top: 2.5%; opacity: 0; visibility: hidden; transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;}
+        #b2{height: 580px;}
         #b3{height: 580px;}
         #b4{height: 550px;}
-        #b1 .blur, #b2 .blur{position: fixed; top: 54.5%; width: 100%; left: 0; height: 45.5%; background-color: black; opacity: 0.8;}
-        #b3 .blur, #b4 .blur{position: fixed; top: 76.5%; width: 100%; left: 0; height: 23.5%; background-color: black; opacity: 0.8;}
+        #b1 .blur{position: fixed; top: 54.5%; width: 100%; left: 0; height: 45.5%; background-color: black; opacity: 0.8;}
+        #b2 .blur, #b3 .blur{position: fixed; top: 76.5%; width: 100%; left: 0; height: 23.5%; background-color: black; opacity: 0.8;}
         #b4 .blur{position: fixed; top: 73.5%; width: 100%; left: 0; height: 26.5%; background-color: black; opacity: 0.8;}
         
 
@@ -73,15 +76,17 @@
         .t2, .t6, .t10, .t15{position: fixed; top: 22%; left: 40%; } /* 나중에 다른 걸로  채워서 css짧게*/
         .t3, .t7, .t11, .t16{position: fixed; top: 22%; left: 60%; } /* 나중에 다른 걸로  채워서 css짧게*/
         .t4, .t8, .t12, .t17{position: fixed; top: 22%; left: 80%; } /* 나중에 다른 걸로  채워서 css짧게*/
-        .t13, .t18{position: fixed; top: 52%; left: 20%; }
-        .t1>a, .t2>a, .t3>a, .t4>a, .t5>a, .t6>a, .t7>a, .t8>a, .t9>a, .t10>a, .t11>a, .t12>a, .t13>a, .t14>a, .t15>a, .t16>a, .t17>a, .t18>a{ font-weight: bold; color: black; font-size: 18px; font-family: 'Suit';}
-        .t1>p, .t2>p, .t3>p, .t4>p, .t5>p, .t6>p, .t7>p, .t8>p, .t9>p, .t10>p, .t11>p, .t12>p, .t13>p, .t14>p, .t15>p, .t16>p, .t17>p, .t18>p{width: 300px; border-bottom: 1px solid black;}
-        .t1>a:hover p, .t2>a:hover p, .t3>a:hover p, .t4>a:hover p, .t5>a:hover p, .t6>a:hover p, .t7>a:hover p, .t8>a:hover p, .t9>a:hover p, .t10>a:hover p, .t11>a:hover p, .t12>a:hover p, .t13>a:hover p, .t14>a:hover p, .t15>a:hover p, .t16>a:hover p, .t17>a:hover p, .t18>a:hover p{border: 1px solid #009ea7;}
-        .t1>a:hover, .t2>a:hover, .t3>a:hover, .t4>a:hover, .t5>a:hover, .t6>a:hover, .t7>a:hover, .t8>a:hover, .t9>a:hover, .t10>a:hover, .t11>a:hover, .t12>a:hover, .t13>a:hover, .t14>a:hover, .t15>a:hover, .t16>a:hover, .t17>a:hover, .t18>a:hover{ color: #009ea7; }
+        .t13, .t18, .t19{position: fixed; top: 52%; left: 20%; }
+        .t20{position: fixed; top: 52%; left: 40%;}
+        .t1>a, .t2>a, .t3>a, .t4>a, .t5>a, .t6>a, .t7>a, .t8>a, .t9>a, .t10>a, .t11>a, .t12>a, .t13>a, .t14>a, .t15>a, .t16>a, .t17>a, .t18>a, .t19>a, .t20>a{ font-weight: bold; color: black; font-size: 18px; font-family: 'Suit';}
+        .t1>p, .t2>p, .t3>p, .t4>p, .t5>p, .t6>p, .t7>p, .t8>p, .t9>p, .t10>p, .t11>p, .t12>p, .t13>p, .t14>p, .t15>p, .t16>p, .t17>p, .t18>p, .t19>p, .t20>p{width: 300px; border-bottom: 1px solid black;}
+        .t1>a:hover p, .t2>a:hover p, .t3>a:hover p, .t4>a:hover p, .t5>a:hover p, .t6>a:hover p, .t7>a:hover p, .t8>a:hover p, .t9>a:hover p, .t10>a:hover p, .t11>a:hover p, .t12>a:hover p, .t13>a:hover p, .t14>a:hover p, .t15>a:hover p, .t16>a:hover p, .t17>a:hover p, .t18>a:hover p, .t19>a:hover p, .t20>a:hover p{border: 1px solid #009ea7;}
+        .t1>a:hover, .t2>a:hover, .t3>a:hover, .t4>a:hover, .t5>a:hover, .t6>a:hover, .t7>a:hover, .t8>a:hover, .t9>a:hover, .t10>a:hover, .t11>a:hover, .t12>a:hover, .t13>a:hover, .t14>a:hover, .t15>a:hover, .t16>a:hover, .t17>a:hover, .t18>a:hover, .t19>a:hover, .t20>a:hover{ color: #009ea7; }
         .t1 img{margin-left: 185px; margin-bottom: -5px;}
-        .t2 img, .t7 img, .t8 img, .t14 img, .t16 img, .t17 img{margin-left: 210px; margin-bottom: -5px;} 
+        .t2 img, .t7 img, .t14 img, .t16 img, .t17 img, .t19 img{margin-left: 210px; margin-bottom: -5px;} 
         .t3 img{margin-left: 240px; margin-bottom: -5px;}
         .t4 img, .t5 img, .t6 img{margin-left: 205px; margin-bottom: -5px;}
+        .t8 img, .t20 img{margin-left: 200px; margin-bottom: -5px;}
         .t9 img{margin-left: 250px; margin-bottom: -5px;}
         .t10 img{margin-left: 85px; margin-bottom: -5px;}
         .t11 img{margin-left: 195px; margin-bottom: -5px;}
@@ -90,15 +95,15 @@
         .t15 img{margin-left: 230px; margin-bottom: -5px;}
         .t18 img{margin-left: 180px; margin-bottom: -5px;}
         
-        .t1 ul li, .t2 ul li, .t3 ul li, .t4 ul li, .t5 ul li, .t6 ul li, .t7 ul li, .t8 ul li, .t9 ul li, .t10 ul li, .t11 ul li, .t12 ul li, .t13 ul li, .t14 ul li, .t15 ul li, .t16 ul li,.t17 ul li, .t18 ul li{list-style-type:disc; color:#666; margin-left: 17px; margin-top: 15px;}
+        .t1 ul li, .t2 ul li, .t3 ul li, .t4 ul li, .t5 ul li, .t6 ul li, .t7 ul li, .t8 ul li, .t9 ul li, .t10 ul li, .t11 ul li, .t12 ul li, .t13 ul li, .t14 ul li, .t15 ul li, .t16 ul li,.t17 ul li, .t18 ul li, .t19 ul li, .t20 ul li{list-style-type:disc; color:#666; margin-left: 17px; margin-top: 15px;}
 
-        .t1 ul li:hover, .t2 ul li:hover, .t3 ul li:hover, .t4 ul li:hover, .t5 ul li:hover, .t6 ul li:hover, .t7 ul li:hover, .t8 ul li:hover, .t9 ul li:hover, .t10 ul li:hover, .t11 ul li:hover, .t12 ul li:hover, .t13 ul li:hover, .t14 ul li:hover, .t15 ul li:hover, .t16 ul li:hover, .t17 ul li:hover, .t18 ul li:hover{color: #009ea7;}
+        .t1 ul li:hover, .t2 ul li:hover, .t3 ul li:hover, .t4 ul li:hover, .t5 ul li:hover, .t6 ul li:hover, .t7 ul li:hover, .t8 ul li:hover, .t9 ul li:hover, .t10 ul li:hover, .t11 ul li:hover, .t12 ul li:hover, .t13 ul li:hover, .t14 ul li:hover, .t15 ul li:hover, .t16 ul li:hover, .t17 ul li:hover, .t18 ul li:hover, .t19 ul li:hover, .t20 ul li:hover{color: #009ea7;}
 
-        .t1 ul li:hover a, .t2 ul li:hover a, .t3 ul li:hover a, .t4 ul li:hover a, .t5 ul li:hover a, .t6 ul li:hover a, .t7 ul li:hover a, .t8 ul li:hover a, .t9 ul li:hover a, .t10 ul li:hover a, .t11 ul li:hover a, .t12 ul li:hover a, .t13 ul li:hover a, .t14 ul li:hover a, .t15 ul li:hover a, .t16 ul li:hover a, .t17 ul li:hover a, .t18 ul li:hover a{color: #009ea7;}
+        .t1 ul li:hover a, .t2 ul li:hover a, .t3 ul li:hover a, .t4 ul li:hover a, .t5 ul li:hover a, .t6 ul li:hover a, .t7 ul li:hover a, .t8 ul li:hover a, .t9 ul li:hover a, .t10 ul li:hover a, .t11 ul li:hover a, .t12 ul li:hover a, .t13 ul li:hover a, .t14 ul li:hover a, .t15 ul li:hover a, .t16 ul li:hover a, .t17 ul li:hover a, .t18 ul li:hover a, .t19 ul li:hover a, .t20 ul li:hover a{color: #009ea7;}
 
-        .t1 ul li a, .t2 ul li a, .t3 ul li a, .t4 ul li a, .t5 ul li a, .t6 ul li a, .t7 ul li a, .t8 ul li a, .t9 ul li a, .t10 ul li a, .t11 ul li a, .t12 ul li a, .t13 ul li a, .t14 ul li a, .t15 ul li a, .t16 ul li a, .t17 ul li a, .t18 ul li a{font-family: 'NanumHuman'; font-size: 16px; color:#666; list-style-type: circle;}
+        .t1 ul li a, .t2 ul li a, .t3 ul li a, .t4 ul li a, .t5 ul li a, .t6 ul li a, .t7 ul li a, .t8 ul li a, .t9 ul li a, .t10 ul li a, .t11 ul li a, .t12 ul li a, .t13 ul li a, .t14 ul li a, .t15 ul li a, .t16 ul li a, .t17 ul li a, .t18 ul li a, .t19 ul li a, .t20 ul li a{font-family: 'NanumHuman'; font-size: 16px; color:#666; list-style-type: circle;}
 
-        .t1 ul li a:hover, .t2 ul li a:hover, .t3 ul li a:hover, .t4 ul li a:hover, .t5 ul li a:hover, .t6 ul li a:hover, .t7 ul li a:hover, .t8 ul li a:hover, .t9 ul li a:hover, .t10 ul li a:hover, .t11 ul li a:hover, .t12 ul li a:hover, .t13 ul li a:hover, .t14 ul li a:hover, .t15 ul li a:hover, .t16 ul li a:hover, .t17 ul li a:hover, .t18 ul li a:hover{color: #009ea7;}
+        .t1 ul li a:hover, .t2 ul li a:hover, .t3 ul li a:hover, .t4 ul li a:hover, .t5 ul li a:hover, .t6 ul li a:hover, .t7 ul li a:hover, .t8 ul li a:hover, .t9 ul li a:hover, .t10 ul li a:hover, .t11 ul li a:hover, .t12 ul li a:hover, .t13 ul li a:hover, .t14 ul li a:hover, .t15 ul li a:hover, .t16 ul li a:hover, .t17 ul li a:hover, .t18 ul li a:hover, .t19 ul li a:hover, .t20 ul li a:hover{color: #009ea7;}
         
         .site{width: 27px; height: 30px; position: fixed; right: 7%; top:9%;}
         .site img{width: 100%; }
@@ -141,7 +146,7 @@
         .bar{ position: relative; width: 1500px; height: 200px; border-top: 1px solid #ccc; top: 690px; left: -340px;  box-sizing: border-box; z-index: 3; justify-content: center; align-items: center;}
         .hover-box { position: absolute; top: 80px; left: 5.9%; display: flex; z-index: 3; }
         .hover-box li{list-style: none; margin-left: 20px; width: 238px; height: 75px; border: 1px solid #ffffff80; text-align: center; line-height: 1; border-radius: 5px;}
-        .box01:hover {border: 2px solid #ffaa00; /* 밝은 주황색 테두리 */ box-shadow: 0 0 5px #ffaa00, 0 0 10px #ffcc00, 0 0 20px #ffcc00;}
+        .box01:hover {border: 2px solid #ffaa00; box-shadow: 0 0 5px #ffaa00, 0 0 10px #ffcc00, 0 0 20px #ffcc00;}
         .hover-box li a{color: white; font-family: 'NanumSquareNeo'; font-size: 16px;}
         .mouse{width: 70px; height: 70px; position: relative; top: 67%; margin: 0; left: 110%; z-index: 1000; }
         .mouse .mou{height: 100%; position: absolute; margin: auto; }
@@ -221,11 +226,46 @@
         .back1:hover .see1, .icon-box1:hover .see1, .back2:hover .see2, .icon-box2:hover .see2, .back3:hover .see3, .icon-box3:hover .see3, .back4:hover .see4, .icon-box4:hover .see4{opacity: 1;}
         /* 섹션 4 */
         #section4{background-image: url(img/ful4.png);}
-        .text4 h1{font-family: 'Rix'; font-weight: 100; font-size: 35px; margin-top: 200px; margin-left: 40%; color: #222222;}
-        .pp3{font-size: 20px; color: #444444; font-family: 'NanumSquareNeo'; margin-left: -10px; text-align: center;}
+        .text4 h1{font-family: 'Rix'; font-weight: 100; font-size: 35px; margin-top: 100px; margin-left: 40%; color: #222222;}
+        .pp3{font-size: 20px; color: #444444; font-family: 'NanumSquareNeo'; margin-left: -10px; text-align: center; margin-bottom: 100px;}
+        .sl{width: 100%; display: flex; justify-content: center; gap: 60px;}
+        .hug1, .hug2{width: 716px; height: 388px;  padding-top: 3px; padding-left: 3px; background-color: #152e6e;}
+        .box02{position: relative; width: 710px; height: 382px; background-color: #ffffff; transition: box-shadow 0.2s ease; }
+        
+        .box02:hover .hsh, .box02:hover .hsh2{color: #009ea7;}
+        .hsh ,.hsh2{color: #152e6e; font-size: 20px; font-family: 'NanumSquareNeo'; position: absolute; padding-left: 20px; top: 50px;}
+        .je1, .in1{color: #333333; font-size: 26px; font-weight: bold; font-family: 'NanumSquareNeo'; position: absolute; padding-left: 20px; top: 140px;}
+        .je2, .in2{color: #666666; font-size: 17px; font-family: 'NanumSquareNeo'; position: absolute; bottom: 100px; padding-left: 20px; line-height: 1.2;}
+        .sli1, .sli2{position: absolute; right: 0; bottom: 0; width: 369px; height: 332px;}
+        .se1, .se2{position: absolute; color: #ffffff; font-size: 18px; width: 222.98px; height: 65px; padding-left: 30px; line-height: 65px; background-color: #152e6e; bottom: 0; left: 0; border-top-right-radius:20px; font-family: 'NanumSquareNeo'; font-weight: bold;}
+        .box02:hover .se1, .box02:hover .se2{ background-color:  #009ea7; }
+        
+        .se1 img{width: 25px; position: absolute; top: 23px; margin-left: 50px;}
+        .se2 img{width: 25px; position: absolute; top: 23px; margin-left: 50px;}
         /* 섹션 5 */
         #section5{background-image: url(img/ful5.png); margin-top: 28px;}
+        .section5{ width: 100%;;}
+        .text5 h1{font-family: 'Rix'; font-weight: 100; font-size: 35px; margin-top: 50px; margin-left: 40%; color: #eeeeee; margin-left: 43%;}
+        .infor{position: relative; display: flex; width: 1300px; height: 500px; left: 300px; top: -30px;}
+        .gnoo{position: absolute; width: 600px; height: 350px;  bottom: 95px; left: 50px;}
+        .gnoo a{color: white; text-decoration: none; font-size: 15px; font-family: 'NanumSquareNeo'; border-bottom: 1px solid #ffffff80; display: block; line-height: 3;}
+        .gnoo a:nth-child(1){font-size: 25px;  line-height: 3; font-weight: bold;}
+        .gnoo a:nth-child(2){font-size: 20px;  line-height: 2.5; font-weight: bold;}
+        .forbox1, .forbox2{width: 200px; height: 200px; border: 1px solid #ffffff80; position: absolute; border-radius: 20px; font-family: 'NanumSquareNeo'; display: flex; justify-content: center;}
+        .forbox1{top: 170px; right: 350px; font-size: 24px;}
+        .forbox2{top: 170px; right: 70px; font-size: 24px;}
+        .forbox1 span, .forbox2 span{position: absolute; transition: all 0.5s ease;  color: white; line-height: 200px; margin: 0 auto;}
+        .forbox1:hover, .forbox2:hover{border: 1px solid #ffaa00; box-shadow: 0 0 5px #ffaa00, 0 0 10px #ffcc00, 0 0 20px #ffcc00;}
+        .forbox1:hover span, .forbox2:hover span{line-height: 100px;}
+        .fors1, .fors2{opacity: 0; transition: all 0.5s ease;}
+        .forbox1:hover .fors1, .forbox2:hover .fors2{opacity: 1; top: 20%;}
         
+        .forbox1 p, .forbox2 p{position: absolute; font-size: 16px; opacity: 0; font-family: 'NanumSquareNeo'; color: white; text-align: center;  bottom: -20px; transition: all 0.5s ease;}
+        .forbox1:hover p, .forbox2:hover p{opacity: 1; bottom: 30px;}
+        .container5 {transition: transform 0.5s ease;}
+        .container5.move-up {transform: translateY(-100px);}
+
+        /* .forbox2 p{position: absolute; font-size: 16px; opacity: 0; font-family: 'NanumSquareNeo';} */
         /* 푸터 */
         footer{width: 100%; height: 300px; background-color: black; position: absolute; bottom: 0;}
         .link1{width: 100%; height: 110px; border: 1px solid #333333;}
@@ -357,75 +397,46 @@
                     });
 
 
-            $('#fullpage').fullpage({
-                navigation: true,
-                navigationPosition: 'right',
-                autoScrolling: true,
-                fitToSection: true,
-                scrollHorizontally: true,
-                scrollingSpeed: 700,
+           $('#fullpage').fullpage({
+    navigation: true,
+    navigationPosition: 'right',
+    autoScrolling: true,
+    fitToSection: true,
+    scrollHorizontally: true,
+    scrollingSpeed: 700,
 
-                onLeave: function(index, nextIndex, direction) {
-                    
-                // 첫 번째 섹션(index 1)을 떠날 때 (아래로 스크롤할 때)
-                if (index === 1 && direction === 'down') {
-                    $('.inner2').addClass('scrolled');
-                } 
-                // 첫 번째 섹션으로 다시 돌아올 때 (위로 스크롤할 때)
-                else if (nextIndex === 1 && direction === 'up') {
-                    $('.inner2').removeClass('scrolled');
-                }
-                // 첫 번째 섹션(index 5)을 떠날 때 (아래로 스크롤할 때)
-                if (index === 5 && direction === 'up') {
-                    $('.inner2').addClass('scrolled');
-                } 
-                // 첫 번째 섹션으로 다시 돌아올 때 (위로 스크롤할 때)
-                else if (nextIndex === 5 && direction === 'down') {
-                    $('.inner2').removeClass('scrolled');
-                }
-                if (index === 5 && direction === 'down') {
-     
-  
-                // if (index === 5 && direction === 'down') {
-                    
-                //     if (index === 5 && direction === 'down') {
-                //         $('footer').addClass('show-footer');
-                //     } 
-                
-                //     else if (nextIndex === 5 && direction === 'up') {
-                //         $('footer').removeClass('show-footer');
-                //     }
-                
-                // }
-                
-            }
-            
-            let footerVisible = false;
-
-            // fullpage 초기화는 이미 되어있으니 onLeave 이벤트에 추가하자
-            // 하지만 onLeave가 이미 정의되어 있어서, 여기서는 휠 이벤트만 따로 처리할게
-
-            // 휠 이벤트로 푸터 보이기
-            $(window).on('wheel', function(e){
-                const delta = e.originalEvent.deltaY;
-                const currentSection = $('.fp-section.active');
-                const isLast = currentSection.index() === 5;  // 0부터 시작하니까 4가 5번째 섹션
-
-                if(isLast && delta > 0 && !footerVisible){
-                $('#footer').addClass('show');
-                footerVisible = true;
-                } else if(footerVisible && delta < 0){
-                $('#footer').removeClass('show');
-                footerVisible = false;
-                // 4번째 섹션으로 이동
-                $.fn.fullpage.moveTo(4);
-                }
-            });
-
-            }
-            
-            });
+    onLeave: function(index, nextIndex, direction) {
+        // 기존 onLeave 코드 유지
+        if (index === 1 && direction === 'down') {
+            $('.inner2').addClass('scrolled');
+        } else if (nextIndex === 1 && direction === 'up') {
+            $('.inner2').removeClass('scrolled');
+        }
+        if (index === 5 && direction === 'up') {
+            $('.inner2').addClass('scrolled');
+        } else if (nextIndex === 5 && direction === 'down') {
+            $('.inner2').removeClass('scrolled');
+        }
         
+        // 여기에 네비게이션 보임/숨김 추가
+        if(nextIndex === 1) {
+            $('#fp-nav').fadeOut();  // 1번째 섹션일 때 네비 숨김
+        } else {
+            $('#fp-nav').fadeIn();   // 2번째 섹션부터 네비 보임
+        }
+    },
+
+    afterRender: function(){
+        // 초기 로딩 시 1번째 섹션이면 네비 숨김
+        const currentIndex = $('.fp-section.active').index() + 1; // 1부터 시작
+        if(currentIndex === 1){
+            $('#fp-nav').hide();
+        } else {
+            $('#fp-nav').show();
+        }
+    }
+});
+
             $('.blur').hover(function(){
                 $('#b1, #b2, #b3, #b4').removeClass('active');
             });
@@ -442,6 +453,7 @@
                     wheelCount++;
                     if (wheelCount >= 2) {
                         $('footer').addClass('show');
+                        $('.container5').addClass('move-up'); // 이 줄 추가
                         footerVisible = true;
                         wheelCount = 0;
                     }
@@ -450,6 +462,7 @@
                 // 푸터가 보이는 상태에서 휠 올릴 때 → 푸터 숨기고 4번 섹션으로
                 else if (footerVisible && delta < 0) {
                     $('footer').removeClass('show');
+                    $('.container5').removeClass('move-up'); // 이 줄 추가
                     footerVisible = false;
                     wheelCount = 0;
                     $.fn.fullpage.moveTo(4);  // 4번째 섹션 (index 3)
@@ -537,6 +550,27 @@
             );
 
             });
+           // 첫 번째 .box02에 hover 시 .hug1 배경색 변경
+            $('.hug1 .box02').hover(
+                function () {
+                    $('.hug1').css('background-color', '#009ea7');
+                },
+                function () {
+                    $('.hug1').css('background-color', '');
+                }
+            );
+
+            // 두 번째 .box02에 hover 시 .hug2 배경색 변경
+            $('.hug2 .box02').hover(
+                function () {
+                    $('.hug2').css('background-color', '#009ea7');
+                },
+                function () {
+                    $('.hug2').css('background-color', '');
+                }
+            );
+
+            
             });
             
 
@@ -618,46 +652,56 @@
                 
             </li>
             <li class="gnblow" class="gnblow2">
-                <a href="#" class="b1" id="bb2">정보 공개</a>
+                <a href="#" class="b1" id="bb2">고객 소통</a>
                     <ul id="b2">
                             <li>
-                                <p>정보 공개</p>
+                                <p>고객 소통</p>
                                 <span>Incheon Airport</span>
                             </li>
                             <li class="t5">
-                                    <a href="#">정보 공개 <img src="img/menu.png"></a>
+                                    <a href="#">공지 사항<img src="img/menu.png"></a>
                                     <p></p>
-                                        <ul>
-                                            <li><a href="#">정보공개제도</a></li>
-                                            <li><a href="#">사전정보공표</a></li>
-                                            <li><a href="#">정보목록</a></li>
-                                            <li><a href="#">공공데이터 개방</a></li>
-                                            <li><a href="#">사업실명제</a></li>
-                                            <li><a href="#">국외출장정보</a></li>
-                                        </ul>
                             </li>
                             
                             <li class="t6">
-                                    <a href="#">경영 공시 <img src="img/menu.png"></a>
+                                    <a href="#">보도자료<img src="img/menu.png"></a>
                                     <p></p>
                             </li>
                                     
                             <li class="t7">
-                                    <a href="#">감사 결과 <img src="img/menu.png"></a>
+                                    <a href="#">민원마당<img src="img/menu.png"></a>
                                     <p></p>
                                         <ul>
-                                            <li><a href="#">감사원/주무부처 감사결과</a></li>
-                                            <li><a href="#">자체감사결과</a></li>
+                                            <li><a href="#">민원신청 안내</a></li>
+                                            <li><a href="#">온라인 민원</a></li>
+                                            <li><a href="#">서면 민원</a></li>
                                         </ul>
                             </li>
                                     
                             <li class="t8">
-                                    <a href="#">항공 통계 <img src="img/menu.png"></a>
+                                    <a href="#">청렴신문고<img src="img/menu.png"></a>
                                     <p></p>
                                         <ul>
-                                            <li><a href="#">인천공항 통계보기</a></li>
-                                            <li><a href="#">참고자료</a></li>
-                                            <li><a href="#">항공통계 자료요청</a></li>
+                                            <li><a href="#">신고하기</a></li>
+                                        </ul>
+                            </li>
+                            <li class="t19">
+                                    <a href="#">신고센터<img src="img/menu.png"></a>
+                                    <p></p>
+                                        <ul>
+                                            <li><a href="#">불법호도급신고</a></li>
+                                            <li><a href="#">예산낭비신고</a></li>
+                                            <li><a href="#">기업성장응답센터</a></li>
+                                            <li><a href="#">안전신문고</a></li>
+                                            <li><a href="#">인사채용비리 제보센터</a></li>
+                                        </ul>
+                            </li>
+                            <li class="t20">
+                                    <a href="#">견학/관람<img src="img/menu.png"></a>
+                                    <p></p>
+                                        <ul>
+                                            <li><a href="#">공항견학</a></li>
+                                            <li><a href="#">홍보전망대</a></li>
                                         </ul>
                             </li>
                         
@@ -870,7 +914,7 @@
                                 출입증을 신청해야 합니다.</p>
                             <div class="see1">자세히 보기</div>
                         </div>
-                    </div>
+                    </div> 
                     <div id="box5">
                         <img src="img/back2.png" class="back2">
                         <div class="bot2"></div>
@@ -920,20 +964,24 @@
                     <h1 class="h3">Airport Program</h1>
                     <p class="pp3">인천국제공항은 고객 여러분이 참여하실 수 있는 다양한 프로그램을 운영하고 있습니다.</p>
             </div>
-            <section class="slider">
-            <div class="box002">
-                <div class="hsh">#Airport-Program<br>#체험시설 #홍보전망대</div>
-                <span class="je1">제2여객터미널 홍보전망대</span>
-                <p class="je2">공항 계류장과 비행기를 바라보며<br>인천국제공항 체험시설 즐기는<br>첨단 스마트 공간입니다.</p>
-                <img src="img/sli1.png" class="sli1">
-                <div class="se1">자세히 보기 <img src="img/s4.png"></div>
+            <section class="sl">
+            <div class="hug1">
+                <div class="box02">
+                    <div class="hsh">#Airport-Program<br>#체험시설 #홍보전망대</div>
+                    <span class="je1">제2여객터미널 홍보전망대</span>
+                    <p class="je2">공항 계류장과 비행기를 바라보며<br>인천국제공항 체험시설 즐기는<br>첨단 스마트 공간입니다.</p>
+                    <img src="img/sli1.png" class="sli1">
+                    <div class="se1">자세히 보기 <img src="img/s4.png"></div>
+                </div>
             </div>
-            <div class="box002">
-                <div class="hsh">#Airport-Program<br>#체험시설 #홍보전망대</div>
-                <span class="in1">인천공항 오성산 전망대</span>
-                <p class="in2">공항의 전경을 한 눈에 조망할 수 있는<br>최적의 장소로써, 활주로를 통해 항공기가<br>이착륙하는 모습을 생생하게 관망할 수 있습니다.</p>
-                <img src="img/sli2.png" class="sli1">
-                <div class="se1">자세히 보기 <img src="img/s4.png"></div>
+            <div class="hug2">
+                <div class="box02">
+                    <div class="hsh2">#Airport-Program<br>#체험시설 #홍보전망대</div>
+                    <span class="in1">인천공항 오성산 전망대</span>
+                    <p class="in2">공항의 전경을 한 눈에 조망할 수 있는 최적의<br>장소로써, 활주로를 통해 항공기가 이착륙하는<br>모습을 생생하게 관망할 수 있습니다.</p>
+                    <img src="img/sli2.png" class="sli1">
+                    <div class="se2">자세히 보기 <img src="img/s4.png"></div>
+                </div>
             </div>
     </section>
         </div>
@@ -941,9 +989,29 @@
         <div class="section" id="section5">
             <div class="container5">
                 <div class="text5">
-                    <p>Walt Disney<br> 05</p>
+                    <h1>Information</h1>
                 </div>
-                
+                <div class="infor">
+                    <div class="gnoo">
+                        <a href="">공지사항</a>
+                        <a href="">NO.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;제목&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;날짜</a>
+                        <a href="">17.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025 인천국제공항공사 Z세대 자문단 모집 안내&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025.09.16</a>
+                        <a href="">16.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;제4차 항공정책기본계획 공청회 안내&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025.09.15</a>
+                        <a href="">15.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;공항청사 종합체육시설 대관 절차 안내&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025.09.12</a>
+                        <a href="">14.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025년 인천국제공항공사 안전한국훈련 실시&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025.09.11</a>
+                        <a href="">13.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025년 9월 공항청사 종합체육시설 휴관 일정 안내&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025.09.01</a>
+                    </div>
+                    <div class="forbox1">
+                        <span>민원신청</span>
+                        <span class="fors1">ㅣ</span>
+                        <p>온라인 민원 신청시 필요한<br>절차를 안내해드립니다.</p>
+                    </div>
+                    <div class="forbox2">
+                        <span>청렴신문고</span>
+                        <span class="fors2">ㅣ</span>
+                        <p>청렴한 공항을 만들기 위해<br>항상 노력하겠습니다.</p>
+                    </div>
+                </div>
             </div>
         </div>
         

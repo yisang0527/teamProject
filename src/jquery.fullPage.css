@@ -187,9 +187,9 @@ html.fp-enabled,
 
 /* ✅ 첫 번째 페이지가 활성화됐을 때 도트 이미지 */
 #fp-nav ul li:nth-child(1) a.active span {
-    width: 30px;
-    height: 10px;
-    background-image: url('Home.png');
+    width: 20px;
+    height: 20px;
+    background-image: url('air.png');
     transform: translate(-50%, -50%) scale(1.5);
     opacity: 1;
 }
