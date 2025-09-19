@@ -196,27 +196,33 @@
         .back1, .back2, .back3, .back4{position:absolute ; width: 100%; height: 100%;}
         .bot1, .bot3{position: absolute; width: 100%; background-color: white; height: 100px; bottom: 0; transition: all 0.3s linear;}
         .bot2, .bot4{position: absolute; width: 100%; background-color: white; height: 100px; top: 0; transition: all 0.3s linear;}
-        .icon-box1, .icon-box3{position: absolute; width: 239.75px; height: 227.78px; background-color: #152e6e; bottom: 0; left: 30px; border-radius: 20px; transition: all 0.3s linear;}
-        .icon-box2, .icon-box4{background-color: #009ea7; position: absolute; width: 239.75px; height: 227.78px; top: 0; left: 30px; border-radius: 20px; transition: all 0.3s linear;}
+        .icon-box1, .icon-box3{position: absolute; width: 239.75px; height: 227.78px; background-color: #152e6e; bottom: 0; left: 30px; border-radius: 20px; transition: all 0.3s ease;}
+        .icon-box2, .icon-box4{background-color: #009ea7; position: absolute; width: 239.75px; height: 227.78px; top: 0; left: 30px; border-radius: 20px; transition: all 0.3s ease;}
         /* .icon-box1:hover, .icon-box2:hover, .icon-box3:hover, .icon-box4:hover{width: 100%; height: 100%; left: 0;} */
         
         .icon1{position: absolute; top: 20px; left: 80px; transition: all 0.3s linear;  transition: top 0.3s ease, left 0.3s ease;}
-        .icon2{position: absolute; top: 20px; left: 75px; transition: all 0.3s linear;  transition: top 0.3s ease, left 0.3s ease;}
+        .icon2{position: absolute; top: 40px; left: 75px; transition: all 0.3s linear;  transition: top 0.3s ease, left 0.3s ease;}
         .icon3{position: absolute; width: 110px; height: 90px; left: 65px; top: 20px; transition: all 0.3s linear;  transition: top 0.3s ease, left 0.3s ease;}
-        .icon4{position: absolute; width: 90px; height: 90px; left: 75px; top: 20px; transition: all 0.3s linear;  transition: top 0.3s ease, left 0.3s ease;}
+        .icon4{position: absolute; width: 90px; height: 90px; left: 75px; top: 40px; transition: all 0.3s linear;  transition: top 0.3s ease, left 0.3s ease;}
         .span4, .span5, .span6, .span7{ font-size: 26px; color: #ffffff; font-family: 'NanumSquareNeo'; font-weight: bold; position: absolute; top: 150px; left: 50px;  transition: top 0.3s ease, left 0.3s ease;}
         .span4{top: 150px; left: 50px; }
-        .span5{top: 150px; left: 20px; }
+        .span5{top: 160px; left: 20px; }
         .span6{top: 150px; left: 35px; }
         .span7{top: 150px; left: 45px; }
-        .te4, .te5, .te6, .te7{opacity: 0;}
-
-
-        /* input{background-image: url('img/m1.png'); background-repeat: no-repeat; background-position: right 30px center; background-size: 25px 25px;} */
-        
+        input{background-image: url('img/see.png'); background-repeat: no-repeat; background-position: right 30px center; background-size: 15px 15px; width: 230px; height: 50px; position: absolute; top: 230px; left: 35px; opacity: 0; }
+        .back3:hover input, .icon-box3:hover input{opacity: 1;}
+        .te4, .te5, .te6, .te7{position: absolute; opacity: 0; font-size: 16px; color: white; font-family: 'NanumSquareNeo'; top: 240px; left: 45px;text-align: center;}
+        .te6{top: 300px; left: 50px;}
+        .te7{left: 60px;}
+        .back1:hover .te4, .icon-box1:hover .te4, .back2:hover .te5, .icon-box2:hover .te5, .back3:hover .te6, .icon-box3:hover .te6, .back4:hover .te7, .icon-box4:hover .te7{opacity: 1;}
+        .see1, .see2, .see3, .see4{width: 220px; height: 65px; position: absolute; font-size: 18px; color: white; background-color: #fa9d1c; text-align: center; line-height: 65px; opacity: 0; top: 410px; left: 42px;}
+        .see3{top: 420px;}
+        .see2, .see4{background-color: #152e6e;}
+        .back1:hover .see1, .icon-box1:hover .see1, .back2:hover .see2, .icon-box2:hover .see2, .back3:hover .see3, .icon-box3:hover .see3, .back4:hover .see4, .icon-box4:hover .see4{opacity: 1;}
         /* 섹션 4 */
-        #section4{background-image: url(img/ful4.png); opacity: 0.3;}
-
+        #section4{background-image: url(img/ful4.png);}
+        .text4 h1{font-family: 'Rix'; font-weight: 100; font-size: 35px; margin-top: 200px; margin-left: 40%; color: #222222;}
+        .pp3{font-size: 20px; color: #444444; font-family: 'NanumSquareNeo'; margin-left: -10px; text-align: center;}
         /* 섹션 5 */
         #section5{background-image: url(img/ful5.png); margin-top: 28px;}
         
@@ -245,7 +251,7 @@
         .footer-info dt { text-align: left; color: #03b4dc; white-space: nowrap; flex-shrink: 0; font-family: 'NanumSquareNeo';}
         .footer-info dd {text-align: right; white-space: nowrap; flex-shrink: 0; color: white; font-family: 'NanumSquareNeo';}
         .footer-r{position: absolute; width: 200px; height: 50px;}
-        .footer-r ul{width: 150px; height: 20px;  margin-top: -30px; margin-left: 1270px; }
+        .footer-r ul{width: 150px; height: 20px;  margin-top: -30px; margin-left: 1270px; display: flex;}
         .footer-r ul li{height: 20px; display: inline; padding-left: 10px; }
         .footer-r ul li a{width: 25px; height: 25px; font-family: 'NanumSquareNeo';}
         .footer-r>img{position: absolute; height: 40px; width: 55px; left: 1210px; top: -40px; }
@@ -261,6 +267,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="src/jquery.fullPage.js"></script>
+    <script src="slick/slick.js"></script>
 
     <script>
         $(function(){
@@ -488,20 +495,21 @@
                 $(`.bot${i}`).css('height', '0');
                 $(`.back${i}`).css('border-radius', '20px');
                 $(`.icon-box${i}`).css({ width: '100%', height: '100%', left: '0' });
+                
 
                 // 개별 icon 위치
                 if (i === 1) {
-                    $('.icon1').css({ top: '100px', left: '115px' });
-                    $('.span4').css({ top: '190px', left: '90px' });
+                    $('.icon1').css({ top: '40px', left: '115px' });
+                    $('.span4').css({ top: '165px', left: '90px' });
                 } else if (i === 2) {
-                    $('.icon2').css({ top: '110px', left: '120px' });
-                    $('.span5').css({ top: '130px', left: '70px' });
+                    $('.icon2').css({ top: '40px', left: '105px' });
+                    $('.span5').css({ top: '160px', left: '50px' });
                 } else if (i === 3) {
-                    $('.icon3').css({ top: '105px', left: '110px' });
-                    $('.span6').css({ top: '150px', left: '50px' });
+                    $('.icon3').css({ top: '40px', left: '95px' });
+                    $('.span6').css({ top: '160px', left: '65px' });
                 } else if (i === 4) {
-                    $('.icon4').css({ top: '108px', left: '118px' });
-                    $('.span7').css({ top: '145px', left: '65px' });
+                    $('.icon4').css({ top: '40px', left: '105px' });
+                    $('.span7').css({ top: '160px', left: '75px' });
                 }
                 },
                 function () {
@@ -509,20 +517,21 @@
                 $(`.bot${i}`).css('height', '100px');
                 $(`.back${i}`).css('border-radius', '0');
                 $(`.icon-box${i}`).css({ width: '', height: '', left: '' });
+                
 
                 // 개별 icon 원위치
                 if (i === 1) {
                     $('.icon1').css({ top: '20px', left: '80px' });
                     $('.span4').css({ top: '150px', left: '50px' });
                 } else if (i === 2) {
-                    $('.icon2').css({ top: '20px', left: '75px' });
-                    $('.span5').css({ top: '150px', left: '20px' });
+                    $('.icon2').css({ top: '40px', left: '75px' });
+                    $('.span5').css({ top: '160px', left: '20px' });
                 } else if (i === 3) {
                     $('.icon3').css({ top: '20px', left: '65px' });
                     $('.span6').css({ top: '150px', left: '35px' });
                 } else if (i === 4) {
-                    $('.icon4').css({ top: '20px', left: '75px' });
-                    $('.span7').css({ top: '150px', left: '45px' });
+                    $('.icon4').css({ top: '40px', left: '75px' });
+                    $('.span7').css({ top: '160px', left: '45px' });
                 }
                 }
             );
@@ -907,11 +916,26 @@
                 </div>
             </div>
         <div class="section" id="section4">
-            <div class="container4">
-                <div class="text4">
-                    <p>Walt Disney<br> 04</p>
-                </div>
+            <div class="text4">
+                    <h1 class="h3">Airport Program</h1>
+                    <p class="pp3">인천국제공항은 고객 여러분이 참여하실 수 있는 다양한 프로그램을 운영하고 있습니다.</p>
             </div>
+            <section class="slider">
+            <div class="box002">
+                <div class="hsh">#Airport-Program<br>#체험시설 #홍보전망대</div>
+                <span class="je1">제2여객터미널 홍보전망대</span>
+                <p class="je2">공항 계류장과 비행기를 바라보며<br>인천국제공항 체험시설 즐기는<br>첨단 스마트 공간입니다.</p>
+                <img src="img/sli1.png" class="sli1">
+                <div class="se1">자세히 보기 <img src="img/s4.png"></div>
+            </div>
+            <div class="box002">
+                <div class="hsh">#Airport-Program<br>#체험시설 #홍보전망대</div>
+                <span class="in1">인천공항 오성산 전망대</span>
+                <p class="in2">공항의 전경을 한 눈에 조망할 수 있는<br>최적의 장소로써, 활주로를 통해 항공기가<br>이착륙하는 모습을 생생하게 관망할 수 있습니다.</p>
+                <img src="img/sli2.png" class="sli1">
+                <div class="se1">자세히 보기 <img src="img/s4.png"></div>
+            </div>
+    </section>
         </div>
 
         <div class="section" id="section5">
